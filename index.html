@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-
-    
-    <meta http-equiv="refresh" content="7; url=https://amzn.to/4tJg1N3">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gone by Dawn – A Totally Gripping Crime Thriller | Val Costa Book 1</title>
@@ -33,11 +30,7 @@
             --amazon-hover: #e88800;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -47,124 +40,70 @@
             line-height: 1.7;
         }
 
-        /* Floating Particles - Light */
         .particles-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-            overflow: hidden;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 0; overflow: hidden;
         }
 
         .particle {
             position: absolute;
             background: radial-gradient(circle, rgba(192, 57, 43, 0.04) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: floatParticle linear infinite;
+            border-radius: 50%; animation: floatParticle linear infinite;
         }
 
         @keyframes floatParticle {
             0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
+            10% { opacity: 1; } 90% { opacity: 1; }
             100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
 
-        /* Urgency Bar */
         .urgency-bar {
             background: linear-gradient(90deg, var(--blood-red), #e74c3c, var(--blood-red));
-            padding: 10px 20px;
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            position: relative;
-            z-index: 100;
-            animation: pulseBar 3s ease-in-out infinite;
+            padding: 10px 20px; text-align: center; font-size: 0.85rem;
+            font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
+            position: relative; z-index: 100; animation: pulseBar 3s ease-in-out infinite;
         }
 
-        .urgency-bar a {
-            color: #fff;
-            text-decoration: none;
-        }
+        .urgency-bar a { color: #fff; text-decoration: none; }
 
-        @keyframes pulseBar {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.9; }
-        }
+        @keyframes pulseBar { 0%, 100% { opacity: 1; } 50% { opacity: 0.9; } }
 
-        .urgency-bar span {
-            color: #ffd93d;
-        }
+        .urgency-bar span { color: #ffd93d; }
 
-        /* HERO */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-            padding: 60px 20px;
-            background: var(--gradient-hero);
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
+            position: relative; overflow: hidden; padding: 60px 20px; background: var(--gradient-hero);
         }
 
         .hero-bg-shapes {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            overflow: hidden;
+            position: absolute; inset: 0; z-index: 1; overflow: hidden;
         }
 
         .hero-bg-shapes::before {
-            content: '';
-            position: absolute;
-            top: -30%;
-            right: -20%;
-            width: 700px;
-            height: 700px;
+            content: ''; position: absolute; top: -30%; right: -20%;
+            width: 700px; height: 700px;
             background: radial-gradient(circle, rgba(192, 57, 43, 0.04) 0%, transparent 70%);
             border-radius: 50%;
         }
 
         .hero-bg-shapes::after {
-            content: '';
-            position: absolute;
-            bottom: -20%;
-            left: -15%;
-            width: 500px;
-            height: 500px;
+            content: ''; position: absolute; bottom: -20%; left: -15%;
+            width: 500px; height: 500px;
             background: radial-gradient(circle, rgba(212, 168, 70, 0.05) 0%, transparent 70%);
             border-radius: 50%;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 1200px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            gap: 60px;
-            align-items: center;
+            position: relative; z-index: 10; max-width: 1200px; width: 100%;
+            display: grid; grid-template-columns: 400px 1fr; gap: 60px; align-items: center;
         }
 
-        /* Book Cover */
-        .book-cover-container {
-            position: relative;
-            display: flex;
-            justify-content: center;
-        }
+        .book-cover-container { position: relative; display: flex; justify-content: center; }
 
         .book-cover-wrapper {
             position: relative;
             transform: perspective(1200px) rotateY(-10deg) rotateX(2deg);
-            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            cursor: pointer;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); cursor: pointer;
         }
 
         .book-cover-wrapper:hover {
@@ -172,12 +111,9 @@
         }
 
         .book-cover-glow {
-            position: absolute;
-            inset: -30px;
+            position: absolute; inset: -30px;
             background: radial-gradient(ellipse, rgba(192, 57, 43, 0.1) 0%, transparent 70%);
-            filter: blur(40px);
-            z-index: -1;
-            animation: glowPulse 4s ease-in-out infinite;
+            filter: blur(40px); z-index: -1; animation: glowPulse 4s ease-in-out infinite;
         }
 
         @keyframes glowPulse {
@@ -186,268 +122,127 @@
         }
 
         .book-cover-img {
-            width: 320px;
-            height: auto;
-            border-radius: 4px 12px 12px 4px;
-            box-shadow: 
-                -8px 8px 30px rgba(0,0,0,0.15),
-                0 20px 60px rgba(0,0,0,0.1),
-                0 0 0 1px rgba(0,0,0,0.05);
-            display: block;
-            transition: box-shadow 0.4s ease;
+            width: 320px; height: auto; border-radius: 4px 12px 12px 4px;
+            box-shadow: -8px 8px 30px rgba(0,0,0,0.15), 0 20px 60px rgba(0,0,0,0.1), 0 0 0 1px rgba(0,0,0,0.05);
+            display: block; transition: box-shadow 0.4s ease;
         }
 
         .book-cover-wrapper:hover .book-cover-img {
-            box-shadow: 
-                -5px 5px 20px rgba(0,0,0,0.12),
-                0 25px 70px rgba(0,0,0,0.15),
-                0 0 40px rgba(192, 57, 43, 0.08);
+            box-shadow: -5px 5px 20px rgba(0,0,0,0.12), 0 25px 70px rgba(0,0,0,0.15), 0 0 40px rgba(192, 57, 43, 0.08);
         }
 
         .book-spine {
-            position: absolute;
-            left: -4px;
-            top: 0;
-            bottom: 0;
-            width: 18px;
+            position: absolute; left: -4px; top: 0; bottom: 0; width: 18px;
             background: linear-gradient(90deg, #ccc 0%, #e0e0e0 40%, #ccc 100%);
-            border-radius: 4px 0 0 4px;
-            box-shadow: inset -2px 0 5px rgba(0,0,0,0.1);
-            z-index: 2;
-            transform: perspective(600px) rotateY(20deg);
-            transform-origin: right center;
+            border-radius: 4px 0 0 4px; box-shadow: inset -2px 0 5px rgba(0,0,0,0.1);
+            z-index: 2; transform: perspective(600px) rotateY(20deg); transform-origin: right center;
         }
 
         .book-pages {
-            position: absolute;
-            right: -6px;
-            top: 8px;
-            bottom: 8px;
-            width: 10px;
-            background: repeating-linear-gradient(
-                180deg,
-                #f5f0e8 0px,
-                #f5f0e8 1px,
-                #e8e0d4 1px,
-                #e8e0d4 2px
-            );
-            border-radius: 0 2px 2px 0;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.08);
+            position: absolute; right: -6px; top: 8px; bottom: 8px; width: 10px;
+            background: repeating-linear-gradient(180deg, #f5f0e8 0px, #f5f0e8 1px, #e8e0d4 1px, #e8e0d4 2px);
+            border-radius: 0 2px 2px 0; box-shadow: 2px 0 5px rgba(0,0,0,0.08);
         }
 
         .book-badge {
-            position: absolute;
-            top: -15px;
-            right: -15px;
+            position: absolute; top: -15px; right: -15px;
             background: linear-gradient(135deg, var(--gold), #c49830);
-            color: #fff;
-            font-size: 0.65rem;
-            font-weight: 800;
-            padding: 8px 14px;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(212, 168, 70, 0.3);
-            z-index: 20;
+            color: #fff; font-size: 0.65rem; font-weight: 800; padding: 8px 14px;
+            border-radius: 50px; text-transform: uppercase; letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(212, 168, 70, 0.3); z-index: 20;
             animation: badgePulse 2s ease-in-out infinite;
         }
 
-        @keyframes badgePulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
+        @keyframes badgePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
 
-        .hero-text {
-            max-width: 600px;
-        }
+        .hero-text { max-width: 600px; }
 
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(192, 57, 43, 0.08);
-            border: 1px solid rgba(192, 57, 43, 0.15);
-            border-radius: 50px;
-            padding: 8px 20px;
-            margin-bottom: 25px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--blood-red);
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(192, 57, 43, 0.08); border: 1px solid rgba(192, 57, 43, 0.15);
+            border-radius: 50px; padding: 8px 20px; margin-bottom: 25px;
+            font-size: 0.8rem; font-weight: 600; letter-spacing: 1px;
+            text-transform: uppercase; color: var(--blood-red);
         }
 
         .hero-badge .badge-dot {
-            width: 8px;
-            height: 8px;
-            background: var(--blood-red);
-            border-radius: 50%;
-            animation: blink 2s infinite;
+            width: 8px; height: 8px; background: var(--blood-red);
+            border-radius: 50%; animation: blink 2s infinite;
         }
 
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
         .hero-tagline {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.6rem;
-            font-style: italic;
-            color: var(--blood-red);
-            margin-bottom: 20px;
-            line-height: 1.4;
+            font-family: 'Crimson Text', serif; font-size: 1.6rem; font-style: italic;
+            color: var(--blood-red); margin-bottom: 20px; line-height: 1.4;
         }
 
         .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.8rem;
-            font-weight: 900;
-            line-height: 1.05;
-            margin-bottom: 8px;
-            color: var(--text-dark);
+            font-family: 'Playfair Display', serif; font-size: 3.8rem; font-weight: 900;
+            line-height: 1.05; margin-bottom: 8px; color: var(--text-dark);
         }
 
         .hero-title-sub {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 400;
-            color: var(--text-muted);
-            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 400;
+            color: var(--text-muted); margin-bottom: 25px;
         }
 
         .hero-description {
-            font-size: 1.05rem;
-            color: var(--text-body);
-            line-height: 1.8;
-            margin-bottom: 30px;
+            font-size: 1.05rem; color: var(--text-body); line-height: 1.8; margin-bottom: 30px;
         }
 
         .hero-rating {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 35px;
-            flex-wrap: wrap;
+            display: flex; align-items: center; gap: 15px; margin-bottom: 35px; flex-wrap: wrap;
         }
 
-        .stars {
-            display: flex;
-            gap: 3px;
-        }
+        .stars { display: flex; gap: 3px; }
+        .star { color: var(--gold); font-size: 1.2rem; }
 
-        .star {
-            color: var(--gold);
-            font-size: 1.2rem;
-        }
+        .rating-text { font-size: 0.95rem; color: var(--text-body); }
+        .rating-text strong { color: var(--gold-light); }
 
-        .rating-text {
-            font-size: 0.95rem;
-            color: var(--text-body);
-        }
-
-        .rating-text strong {
-            color: var(--gold-light);
-        }
-
-        .hero-cta-group {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
+        .hero-cta-group { display: flex; flex-direction: column; gap: 15px; }
 
         .cta-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
+            display: inline-flex; align-items: center; justify-content: center; gap: 12px;
             background: linear-gradient(135deg, var(--amazon-orange), var(--amazon-hover));
-            color: #fff;
-            text-decoration: none;
-            padding: 18px 45px;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(255, 153, 0, 0.25);
-            position: relative;
-            overflow: hidden;
-            border: none;
-            cursor: pointer;
+            color: #fff; text-decoration: none; padding: 18px 45px; border-radius: 8px;
+            font-size: 1.1rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+            transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(255, 153, 0, 0.25);
+            position: relative; overflow: hidden; border: none; cursor: pointer;
         }
 
         .cta-primary::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             transition: left 0.5s ease;
         }
 
-        .cta-primary:hover::before {
-            left: 100%;
-        }
+        .cta-primary:hover::before { left: 100%; }
 
         .cta-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 30px rgba(255, 153, 0, 0.35);
         }
 
-        .cta-red {
-            background: linear-gradient(135deg, var(--blood-red), var(--deep-red));
-            box-shadow: 0 4px 20px var(--shadow-red);
-        }
-
-        .cta-red:hover {
-            box-shadow: 0 8px 30px rgba(192, 57, 43, 0.3);
-        }
-
         .cta-secondary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: transparent;
-            color: var(--text-dark);
-            text-decoration: none;
-            padding: 15px 40px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border: 1px solid var(--card-border);
-            transition: all 0.3s ease;
-            cursor: pointer;
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+            background: transparent; color: var(--text-dark); text-decoration: none;
+            padding: 15px 40px; border-radius: 8px; font-size: 0.95rem; font-weight: 500;
+            border: 1px solid var(--card-border); transition: all 0.3s ease; cursor: pointer;
         }
 
         .cta-secondary:hover {
-            border-color: var(--blood-red);
-            color: var(--blood-red);
+            border-color: var(--blood-red); color: var(--blood-red);
             background: rgba(192, 57, 43, 0.03);
         }
 
-        .cta-note {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-align: center;
-        }
+        .cta-note { font-size: 0.8rem; color: var(--text-muted); text-align: center; }
 
-        /* Scroll Indicator */
         .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            animation: bounce 2s infinite;
+            position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+            z-index: 10; display: flex; flex-direction: column; align-items: center;
+            gap: 8px; animation: bounce 2s infinite;
         }
 
         @keyframes bounce {
@@ -456,749 +251,382 @@
         }
 
         .scroll-indicator span {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: var(--text-muted);
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; color: var(--text-muted);
         }
 
         .scroll-arrow {
-            width: 20px;
-            height: 20px;
-            border-right: 2px solid var(--blood-red);
-            border-bottom: 2px solid var(--blood-red);
-            transform: rotate(45deg);
+            width: 20px; height: 20px; border-right: 2px solid var(--blood-red);
+            border-bottom: 2px solid var(--blood-red); transform: rotate(45deg);
         }
 
-        section {
-            position: relative;
-            z-index: 10;
-        }
+        section { position: relative; z-index: 10; }
 
         .section-divider {
-            width: 100%;
-            height: 1px;
+            width: 100%; height: 1px;
             background: linear-gradient(90deg, transparent, var(--card-border), transparent);
-            margin: 0;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         .section-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            color: var(--blood-red);
-            text-align: center;
-            margin-bottom: 10px;
-            font-weight: 600;
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 4px;
+            color: var(--blood-red); text-align: center; margin-bottom: 10px; font-weight: 600;
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            font-weight: 900;
-            text-align: center;
-            margin-bottom: 15px;
-            line-height: 1.2;
-            color: var(--text-dark);
+            font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 900;
+            text-align: center; margin-bottom: 15px; line-height: 1.2; color: var(--text-dark);
         }
 
         .section-subtitle {
-            text-align: center;
-            color: var(--text-body);
-            font-size: 1.05rem;
-            max-width: 600px;
-            margin: 0 auto 50px;
-            line-height: 1.7;
+            text-align: center; color: var(--text-body); font-size: 1.05rem;
+            max-width: 600px; margin: 0 auto 50px; line-height: 1.7;
         }
 
-        /* STATS */
-        .stats-bar {
-            padding: 60px 20px;
-            background: var(--off-white);
-        }
+        .stats-bar { padding: 60px 20px; background: var(--off-white); }
 
         .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px;
+            max-width: 900px; margin: 0 auto; text-align: center;
         }
 
         .stat-item { padding: 20px; }
 
         .stat-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--blood-red);
-            line-height: 1;
-            margin-bottom: 8px;
+            font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900;
+            color: var(--blood-red); line-height: 1; margin-bottom: 8px;
         }
 
         .stat-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-muted);
+            font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-muted);
         }
 
-        /* SYNOPSIS */
-        .synopsis {
-            padding: 100px 20px;
-            background: var(--gradient-warm);
-        }
+        .synopsis { padding: 100px 20px; background: var(--gradient-warm); }
 
         .synopsis-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: start;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;
         }
 
         .synopsis-text p {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.15rem;
-            line-height: 1.9;
-            color: var(--text-body);
-            margin-bottom: 20px;
+            font-family: 'Crimson Text', serif; font-size: 1.15rem; line-height: 1.9;
+            color: var(--text-body); margin-bottom: 20px;
         }
 
         .synopsis-text p:first-child::first-letter {
-            font-size: 3.5rem;
-            font-family: 'Playfair Display', serif;
-            color: var(--blood-red);
-            float: left;
-            margin-right: 8px;
-            line-height: 0.8;
+            font-size: 3.5rem; font-family: 'Playfair Display', serif;
+            color: var(--blood-red); float: left; margin-right: 8px; line-height: 0.8;
         }
 
         .synopsis-text .highlight-line {
-            color: var(--blood-red);
-            font-weight: 600;
-            font-style: italic;
-            font-size: 1.25rem;
-            border-left: 3px solid var(--blood-red);
-            padding-left: 20px;
-            margin: 30px 0;
+            color: var(--blood-red); font-weight: 600; font-style: italic; font-size: 1.25rem;
+            border-left: 3px solid var(--blood-red); padding-left: 20px; margin: 30px 0;
         }
 
-        .synopsis-sidebar {
-            position: sticky;
-            top: 40px;
-        }
+        .synopsis-sidebar { position: sticky; top: 40px; }
 
         .suspect-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 35px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 12px var(--shadow-soft);
+            background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px;
+            padding: 35px; margin-bottom: 25px; box-shadow: 0 2px 12px var(--shadow-soft);
             transition: all 0.3s ease;
         }
 
         .suspect-card:hover {
-            box-shadow: 0 8px 30px var(--shadow-medium);
-            transform: translateY(-3px);
+            box-shadow: 0 8px 30px var(--shadow-medium); transform: translateY(-3px);
         }
 
-        .suspect-card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
+        .suspect-card-header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
 
         .suspect-icon {
-            width: 45px;
-            height: 45px;
-            background: rgba(192, 57, 43, 0.08);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
+            width: 45px; height: 45px; background: rgba(192, 57, 43, 0.08); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
         }
 
-        .suspect-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            color: var(--text-dark);
-        }
-
-        .suspect-card p {
-            color: var(--text-body);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
+        .suspect-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--text-dark); }
+        .suspect-card p { color: var(--text-body); font-size: 0.95rem; line-height: 1.7; }
 
         .mystery-question {
             background: linear-gradient(135deg, rgba(192, 57, 43, 0.05), rgba(192, 57, 43, 0.01));
-            border: 1px solid rgba(192, 57, 43, 0.12);
-            border-radius: 16px;
-            padding: 30px;
-            text-align: center;
+            border: 1px solid rgba(192, 57, 43, 0.12); border-radius: 16px; padding: 30px; text-align: center;
         }
 
         .mystery-question p {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--text-dark);
-            line-height: 1.6;
+            font-family: 'Crimson Text', serif; font-size: 1.2rem; font-style: italic;
+            color: var(--text-dark); line-height: 1.6;
         }
 
-        .synopsis-cta {
-            margin-top: 35px;
-            text-align: center;
-        }
+        .synopsis-cta { margin-top: 35px; text-align: center; }
 
-        /* FEATURES */
-        .features {
-            padding: 100px 20px;
-            background: var(--off-white);
-        }
+        .features { padding: 100px 20px; background: var(--off-white); }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 
         .feature-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 2px 10px var(--shadow-soft);
+            background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px;
+            padding: 40px 30px; text-align: center; transition: all 0.4s ease;
+            position: relative; overflow: hidden; box-shadow: 0 2px 10px var(--shadow-soft);
         }
 
         .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
             background: linear-gradient(90deg, var(--blood-red), var(--gold));
-            opacity: 0;
-            transition: opacity 0.4s ease;
+            opacity: 0; transition: opacity 0.4s ease;
         }
 
         .feature-card:hover::before { opacity: 1; }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px var(--shadow-medium);
+            transform: translateY(-5px); box-shadow: 0 15px 40px var(--shadow-medium);
         }
 
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            display: block;
-        }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
 
         .feature-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-            color: var(--text-dark);
+            font-family: 'Playfair Display', serif; font-size: 1.3rem;
+            margin-bottom: 12px; color: var(--text-dark);
         }
 
-        .feature-card p {
-            color: var(--text-body);
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
+        .feature-card p { color: var(--text-body); font-size: 0.9rem; line-height: 1.7; }
 
-        /* MID CTA BANNER */
         .mid-cta-banner {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #fff5f5, #ffffff, #fffbf0);
+            padding: 60px 20px; background: linear-gradient(135deg, #fff5f5, #ffffff, #fffbf0);
             text-align: center;
         }
 
         .mid-cta-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            max-width: 800px;
-            margin: 0 auto;
-            flex-wrap: wrap;
+            display: flex; align-items: center; justify-content: center; gap: 40px;
+            max-width: 800px; margin: 0 auto; flex-wrap: wrap;
         }
 
         .mid-cta-banner img {
-            width: 100px;
-            border-radius: 4px 6px 6px 4px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            width: 100px; border-radius: 4px 6px 6px 4px; box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
 
         .mid-cta-text { text-align: left; }
 
         .mid-cta-text h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-            color: var(--text-dark);
+            font-family: 'Playfair Display', serif; font-size: 1.5rem;
+            margin-bottom: 8px; color: var(--text-dark);
         }
 
-        .mid-cta-text p {
-            color: var(--text-body);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
+        .mid-cta-text p { color: var(--text-body); font-size: 0.95rem; margin-bottom: 15px; }
 
-        /* REVIEWS */
-        .reviews {
-            padding: 100px 20px;
-            background: var(--light-bg);
-        }
+        .reviews { padding: 100px 20px; background: var(--light-bg); }
 
-        .reviews-marquee {
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
+        .reviews-marquee { overflow: hidden; margin-bottom: 30px; }
 
         .reviews-track {
-            display: flex;
-            gap: 25px;
-            animation: scrollReviews 40s linear infinite;
-            width: max-content;
+            display: flex; gap: 25px; animation: scrollReviews 40s linear infinite; width: max-content;
         }
 
         .reviews-track:hover { animation-play-state: paused; }
 
         @keyframes scrollReviews {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% { transform: translateX(0); } 100% { transform: translateX(-50%); }
         }
 
         .review-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 30px;
-            min-width: 350px;
-            max-width: 380px;
-            flex-shrink: 0;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px var(--shadow-soft);
+            background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px;
+            padding: 30px; min-width: 350px; max-width: 380px; flex-shrink: 0;
+            transition: all 0.3s ease; box-shadow: 0 2px 10px var(--shadow-soft);
         }
 
         .review-card:hover {
-            box-shadow: 0 8px 30px var(--shadow-medium);
-            transform: translateY(-3px);
+            box-shadow: 0 8px 30px var(--shadow-medium); transform: translateY(-3px);
         }
 
-        .review-stars {
-            margin-bottom: 15px;
-            color: var(--gold);
-            font-size: 1rem;
-            letter-spacing: 2px;
-        }
+        .review-stars { margin-bottom: 15px; color: var(--gold); font-size: 1rem; letter-spacing: 2px; }
 
         .review-text {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.05rem;
-            font-style: italic;
-            line-height: 1.7;
-            color: var(--text-dark);
-            margin-bottom: 15px;
+            font-family: 'Crimson Text', serif; font-size: 1.05rem; font-style: italic;
+            line-height: 1.7; color: var(--text-dark); margin-bottom: 15px;
         }
 
         .review-author {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px;
         }
 
-        .reviews-track-reverse {
-            animation: scrollReviewsReverse 45s linear infinite;
-        }
+        .reviews-track-reverse { animation: scrollReviewsReverse 45s linear infinite; }
 
         @keyframes scrollReviewsReverse {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
+            0% { transform: translateX(-50%); } 100% { transform: translateX(0); }
         }
 
-        /* COMPARISON */
-        .comparison {
-            padding: 80px 20px;
-            background: var(--off-white);
-        }
+        .comparison { padding: 80px 20px; background: var(--off-white); }
 
         .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            max-width: 700px;
-            margin: 0 auto;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px;
+            max-width: 700px; margin: 0 auto;
         }
 
-        /* SERIES */
-        .series {
-            padding: 100px 20px;
-            background: var(--gradient-warm);
-        }
+        .series { padding: 100px 20px; background: var(--gradient-warm); }
 
-        .series-timeline {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+        .series-timeline { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
 
         .series-book {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 30px 25px;
-            width: 220px;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            box-shadow: 0 2px 10px var(--shadow-soft);
+            background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px;
+            padding: 30px 25px; width: 220px; text-align: center; transition: all 0.3s ease;
+            position: relative; box-shadow: 0 2px 10px var(--shadow-soft);
         }
 
         .series-book.current {
-            border-color: var(--blood-red);
-            box-shadow: 0 5px 25px var(--shadow-red);
+            border-color: var(--blood-red); box-shadow: 0 5px 25px var(--shadow-red);
         }
 
         .series-book.current::after {
-            content: 'START HERE';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--blood-red);
-            color: #fff;
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            padding: 4px 12px;
-            border-radius: 20px;
+            content: 'START HERE'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+            background: var(--blood-red); color: #fff; font-size: 0.65rem; font-weight: 700;
+            letter-spacing: 1px; padding: 4px 12px; border-radius: 20px;
         }
 
-        .series-book:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px var(--shadow-medium);
-        }
+        .series-book:hover { transform: translateY(-5px); box-shadow: 0 10px 30px var(--shadow-medium); }
 
         .series-book-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--blood-red);
-            opacity: 0.2;
-            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900;
+            color: var(--blood-red); opacity: 0.2; margin-bottom: 10px;
         }
 
         .series-book.current .series-book-number { opacity: 1; }
 
         .series-book h4 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: var(--text-dark);
+            font-family: 'Playfair Display', serif; font-size: 1.1rem;
+            margin-bottom: 8px; color: var(--text-dark);
         }
 
         .series-book p { font-size: 0.8rem; color: var(--text-muted); }
 
-        /* AUTHOR */
-        .author {
-            padding: 100px 20px;
-            background: var(--off-white);
-        }
+        .author { padding: 100px 20px; background: var(--off-white); }
 
         .author-content {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            gap: 50px;
-            align-items: start;
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 50px;
+            display: grid; grid-template-columns: 200px 1fr; gap: 50px; align-items: start;
+            max-width: 800px; margin: 0 auto; background: var(--card-bg);
+            border: 1px solid var(--card-border); border-radius: 20px; padding: 50px;
             box-shadow: 0 4px 20px var(--shadow-soft);
         }
 
         .author-avatar {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
+            width: 200px; height: 200px; border-radius: 50%;
             background: linear-gradient(135deg, rgba(192, 57, 43, 0.08), rgba(192, 57, 43, 0.02));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
+            display: flex; align-items: center; justify-content: center; font-size: 4rem;
             border: 2px solid rgba(192, 57, 43, 0.1);
         }
 
         .author-info h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-            color: var(--text-dark);
+            font-family: 'Playfair Display', serif; font-size: 1.8rem;
+            margin-bottom: 5px; color: var(--text-dark);
         }
 
         .author-info .author-title-label {
-            color: var(--blood-red);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+            color: var(--blood-red); font-size: 0.85rem; text-transform: uppercase;
+            letter-spacing: 2px; margin-bottom: 20px;
         }
 
-        .author-info p {
-            color: var(--text-body);
-            font-size: 0.95rem;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
+        .author-info p { color: var(--text-body); font-size: 0.95rem; line-height: 1.8; margin-bottom: 15px; }
 
-        .author-books {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
+        .author-books { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
 
         .author-book-tag {
-            background: rgba(192, 57, 43, 0.06);
-            border: 1px solid rgba(192, 57, 43, 0.1);
-            border-radius: 20px;
-            padding: 6px 15px;
-            font-size: 0.75rem;
-            color: var(--text-body);
+            background: rgba(192, 57, 43, 0.06); border: 1px solid rgba(192, 57, 43, 0.1);
+            border-radius: 20px; padding: 6px 15px; font-size: 0.75rem; color: var(--text-body);
         }
 
-        /* FINAL CTA */
         .final-cta {
-            padding: 120px 20px;
-            background: linear-gradient(135deg, #fff8f5, #ffffff, #fffdf5);
-            position: relative;
-            overflow: hidden;
+            padding: 120px 20px; background: linear-gradient(135deg, #fff8f5, #ffffff, #fffdf5);
+            position: relative; overflow: hidden;
         }
 
         .final-cta-bg {
-            position: absolute;
-            inset: 0;
+            position: absolute; inset: 0;
             background: radial-gradient(ellipse at center, rgba(192, 57, 43, 0.04) 0%, transparent 60%);
         }
 
         .final-cta-content {
-            position: relative;
-            z-index: 10;
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
+            position: relative; z-index: 10; max-width: 700px; margin: 0 auto; text-align: center;
         }
 
-        .final-cta-content .section-title {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
+        .final-cta-content .section-title { font-size: 3rem; margin-bottom: 20px; }
 
         .final-cta-content p {
-            color: var(--text-body);
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            line-height: 1.8;
+            color: var(--text-body); font-size: 1.1rem; margin-bottom: 40px; line-height: 1.8;
         }
 
-        .final-cta-book {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-        }
+        .final-cta-book { display: flex; justify-content: center; margin-bottom: 40px; }
 
         .final-cta-book img {
-            width: 160px;
-            height: auto;
-            border-radius: 4px 8px 8px 4px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
-            transition: transform 0.3s ease;
+            width: 160px; height: auto; border-radius: 4px 8px 8px 4px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12); transition: transform 0.3s ease;
         }
 
         .final-cta-book img:hover { transform: scale(1.05); }
 
-        .cta-row {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-        }
+        .cta-row { display: flex; flex-direction: column; align-items: center; gap: 15px; }
 
         .guarantee-badges {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-            flex-wrap: wrap;
+            display: flex; justify-content: center; gap: 30px; margin-top: 30px; flex-wrap: wrap;
         }
 
-        .guarantee-badge {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
+        .guarantee-badge { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--text-muted); }
+        .guarantee-badge .g-icon { color: var(--gold); font-size: 1rem; }
 
-        .guarantee-badge .g-icon {
-            color: var(--gold);
-            font-size: 1rem;
-        }
-
-        /* FOOTER */
         footer {
-            padding: 40px 20px;
-            text-align: center;
-            background: var(--off-white);
+            padding: 40px 20px; text-align: center; background: var(--off-white);
             border-top: 1px solid var(--card-border);
         }
 
-        footer p {
-            color: var(--text-muted);
-            font-size: 0.8rem;
-        }
+        footer p { color: var(--text-muted); font-size: 0.8rem; }
 
-        /* STICKY CTA */
         .sticky-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.97);
-            backdrop-filter: blur(20px);
-            border-top: 1px solid var(--card-border);
-            padding: 15px 20px;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-            transform: translateY(100%);
-            transition: transform 0.4s ease;
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: rgba(255, 255, 255, 0.97); backdrop-filter: blur(20px);
+            border-top: 1px solid var(--card-border); padding: 15px 20px; z-index: 1000;
+            display: flex; justify-content: center; align-items: center; gap: 25px;
+            transform: translateY(100%); transition: transform 0.4s ease;
             box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
         }
 
         .sticky-cta.visible { transform: translateY(0); }
 
-        .sticky-cta-text {
-            font-size: 0.9rem;
-            color: var(--text-dark);
-        }
-
+        .sticky-cta-text { font-size: 0.9rem; color: var(--text-dark); }
         .sticky-cta-text strong { color: var(--blood-red); }
 
-        .sticky-cta .cta-primary {
-            padding: 12px 30px;
-            font-size: 0.9rem;
-        }
+        .sticky-cta .cta-primary { padding: 12px 30px; font-size: 0.9rem; }
 
         .sticky-cta-cover {
-            width: 40px;
-            height: auto;
-            border-radius: 2px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 40px; height: auto; border-radius: 2px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        /* ANIMATIONS */
         .fade-up {
-            opacity: 0;
-            transform: translateY(40px);
+            opacity: 0; transform: translateY(40px);
             transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-        .scar-text {
-            position: relative;
-            display: inline-block;
-        }
+        .scar-text { position: relative; display: inline-block; }
 
         .scar-text::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--blood-red);
-            opacity: 0.4;
-            transform: skewX(-15deg);
+            content: ''; position: absolute; bottom: -2px; left: 0; right: 0;
+            height: 3px; background: var(--blood-red); opacity: 0.4; transform: skewX(-15deg);
         }
 
-        /* RESPONSIVE */
         @media (max-width: 968px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 40px;
-            }
-
+            .hero-content { grid-template-columns: 1fr; text-align: center; gap: 40px; }
             .book-cover-container { order: -1; }
-
-            .book-cover-wrapper {
-                transform: perspective(1200px) rotateY(-5deg);
-            }
-
+            .book-cover-wrapper { transform: perspective(1200px) rotateY(-5deg); }
             .book-cover-img { width: 260px; }
-
             .hero-title { font-size: 2.8rem; }
             .hero-rating { justify-content: center; }
             .synopsis-grid { grid-template-columns: 1fr; }
             .synopsis-sidebar { position: static; }
             .features-grid { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
-
-            .author-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
+            .author-content { grid-template-columns: 1fr; text-align: center; }
             .author-avatar { margin: 0 auto; }
             .author-books { justify-content: center; }
-
-            .series-timeline {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .sticky-cta {
-                flex-direction: column;
-                gap: 10px;
-                padding: 12px 15px;
-            }
-
+            .series-timeline { flex-direction: column; align-items: center; }
+            .sticky-cta { flex-direction: column; gap: 10px; padding: 12px 15px; }
             .sticky-cta-cover { display: none; }
             .comparison-grid { grid-template-columns: 1fr; max-width: 350px; }
-
-            .mid-cta-inner {
-                flex-direction: column;
-                text-align: center;
-            }
+            .mid-cta-inner { flex-direction: column; text-align: center; }
             .mid-cta-text { text-align: center; }
         }
 
@@ -1215,10 +643,8 @@
 </head>
 <body>
 
-    <!-- Particles -->
     <div class="particles-container" id="particles"></div>
 
-    <!-- Urgency Bar -->
     <div class="urgency-bar">
         <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener">
             🔥 <span>3,000+ Readers</span> Can't Stop Talking About This Book — Get Your Copy Now →
@@ -1228,67 +654,35 @@
     <!-- HERO -->
     <section class="hero">
         <div class="hero-bg-shapes"></div>
-
         <div class="hero-content">
             <div class="book-cover-container">
-                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="book-cover-wrapper">
+                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="book-cover-wrapper" data-track="hero-cover">
                     <div class="book-cover-glow"></div>
                     <div class="book-badge">⭐ Bestseller</div>
                     <div class="book-spine"></div>
-                    <img 
-                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" 
-                        alt="Gone by Dawn by H.K. Christie - Book Cover" 
-                        class="book-cover-img"
-                        loading="eager"
-                    >
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" alt="Gone by Dawn by H.K. Christie" class="book-cover-img" loading="eager">
                     <div class="book-pages"></div>
                 </a>
             </div>
 
             <div class="hero-text">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    #1 Bestselling Crime Thriller Series
-                </div>
-
-                <div class="hero-tagline">
-                    You kissed your daughter goodnight.<br>By morning, she's gone.
-                </div>
-
+                <div class="hero-badge"><span class="badge-dot"></span>#1 Bestselling Crime Thriller Series</div>
+                <div class="hero-tagline">You kissed your daughter goodnight.<br>By morning, she's gone.</div>
                 <h1 class="hero-title">Gone by Dawn</h1>
                 <p class="hero-title-sub">A Val Costa Thriller — Book 1 by H.K. Christie</p>
-
-                <p class="hero-description">
-                    FBI Agent Val Costa survived a serial killer called the Bear. Now, a teenager has vanished in her hometown — and a pink teddy bear appears at her door. The nightmare isn't over. <em>It followed her home.</em>
-                </p>
-
+                <p class="hero-description">FBI Agent Val Costa survived a serial killer called the Bear. Now, a teenager has vanished in her hometown — and a pink teddy bear appears at her door. The nightmare isn't over. <em>It followed her home.</em></p>
                 <div class="hero-rating">
-                    <div class="stars">
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star">★</span>
-                        <span class="star" style="opacity: 0.5;">★</span>
-                    </div>
+                    <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star" style="opacity:0.5">★</span></div>
                     <span class="rating-text"><strong>4.4/5</strong> — 3,040+ Amazon Reviews</span>
                 </div>
-
                 <div class="hero-cta-group">
-                    <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary">
-                        📖 Get It Now on Amazon
-                    </a>
-                    <a href="#synopsis" class="cta-secondary">
-                        ↓ Read the Synopsis
-                    </a>
+                    <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" data-track="hero-cta">📖 Get It Now on Amazon</a>
+                    <a href="#synopsis" class="cta-secondary">↓ Read the Synopsis</a>
                     <p class="cta-note">Available on Kindle • Paperback • Audiobook</p>
                 </div>
             </div>
         </div>
-
-        <div class="scroll-indicator">
-            <span>Discover More</span>
-            <div class="scroll-arrow"></div>
-        </div>
+        <div class="scroll-indicator"><span>Discover More</span><div class="scroll-arrow"></div></div>
     </section>
 
     <div class="section-divider"></div>
@@ -1296,22 +690,10 @@
     <!-- STATS -->
     <section class="stats-bar">
         <div class="stats-grid">
-            <div class="stat-item fade-up">
-                <div class="stat-number">3,040+</div>
-                <div class="stat-label">Amazon Reviews</div>
-            </div>
-            <div class="stat-item fade-up">
-                <div class="stat-number">4.4</div>
-                <div class="stat-label">Star Rating</div>
-            </div>
-            <div class="stat-item fade-up">
-                <div class="stat-number">2,191</div>
-                <div class="stat-label">Goodreads Ratings</div>
-            </div>
-            <div class="stat-item fade-up">
-                <div class="stat-number">4</div>
-                <div class="stat-label">Books in Series</div>
-            </div>
+            <div class="stat-item fade-up"><div class="stat-number">3,040+</div><div class="stat-label">Amazon Reviews</div></div>
+            <div class="stat-item fade-up"><div class="stat-number">4.4</div><div class="stat-label">Star Rating</div></div>
+            <div class="stat-item fade-up"><div class="stat-number">2,191</div><div class="stat-label">Goodreads Ratings</div></div>
+            <div class="stat-item fade-up"><div class="stat-number">4</div><div class="stat-label">Books in Series</div></div>
         </div>
     </section>
 
@@ -1321,60 +703,26 @@
     <section class="synopsis" id="synopsis">
         <div class="container">
             <p class="section-label fade-up">The Story</p>
-            <h2 class="section-title fade-up">She Survived the Bear Once.<br><span style="color: var(--blood-red);">Will She Survive Again?</span></h2>
+            <h2 class="section-title fade-up">She Survived the Bear Once.<br><span style="color:var(--blood-red);">Will She Survive Again?</span></h2>
             <p class="section-subtitle fade-up">A missing girl. A serial killer's signature. A mother's worst nightmare.</p>
-
             <div class="synopsis-grid">
                 <div class="synopsis-text fade-up">
                     <p>Two days ago, FBI Agent Val Costa came face to face with a serial killer known as the Bear. One of only two women ever to survive, she's forever branded with his signature: a curling "S" carved into her skin. Val knows it's only a matter of time before he takes another victim.</p>
-
                     <p>Forced home to recover, Val returns to Red Rose County, California, to be with her son. But the very next day she finds the close-knit community panic-stricken over the disappearance of blonde-haired, freckled-faced local teen, Scarlett Douglas.</p>
-
                     <p class="highlight-line">The sight of Scarlett's unworn prom dress hanging in her room brings a tear to Val's eye. She won't sleep until this sweet girl is home and safe.</p>
-
                     <p>Defying orders, Val interviews the Douglas family at their farmhouse and uncovers a less-than-idyllic picture. Housebound since a devastating diagnosis, Scarlett's world was crumbling.</p>
-
                     <p>Val and her team search the nearby towering redwoods for any clue to what happened the morning Scarlett disappeared. But the case takes a sinister turn when a little pink teddy bear is delivered to Val's door.</p>
-
                     <p>Did the Bear follow her to Red Rose County? Is her family now in terrible danger? Could Scarlett be his latest victim?</p>
-
                     <p class="highlight-line">With time running out to save Scarlett's life, and the truth just within her reach, will Val once again come face to face with the Bear? And who — if anyone — will survive?</p>
-
                     <div class="synopsis-cta">
-                        <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" style="font-size: 0.95rem; padding: 15px 35px;">
-                            🔥 I Need to Read This — Get It Now
-                        </a>
+                        <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" style="font-size:0.95rem;padding:15px 35px;" data-track="synopsis-cta">🔥 I Need to Read This — Get It Now</a>
                     </div>
                 </div>
-
                 <div class="synopsis-sidebar fade-up">
-                    <div class="suspect-card">
-                        <div class="suspect-card-header">
-                            <div class="suspect-icon">🔍</div>
-                            <h3>The Investigator</h3>
-                        </div>
-                        <p>FBI Agent Val Costa — scarred survivor, fierce mother, relentless detective. She won't stop until Scarlett is found.</p>
-                    </div>
-
-                    <div class="suspect-card">
-                        <div class="suspect-card-header">
-                            <div class="suspect-icon">🐻</div>
-                            <h3>The Bear</h3>
-                        </div>
-                        <p>A serial killer who brands his victims. He left his mark on Val. Now a pink teddy bear arrives at her door. Is he back?</p>
-                    </div>
-
-                    <div class="suspect-card">
-                        <div class="suspect-card-header">
-                            <div class="suspect-icon">👨‍👩‍👧</div>
-                            <h3>The Douglases</h3>
-                        </div>
-                        <p>Scarlett's loving parents — or are they? Val begins to question everything they claim to be.</p>
-                    </div>
-
-                    <div class="mystery-question">
-                        <p>"Working around the clock, Val begins to question if the Douglases are the loving parents they claim to be..."</p>
-                    </div>
+                    <div class="suspect-card"><div class="suspect-card-header"><div class="suspect-icon">🔍</div><h3>The Investigator</h3></div><p>FBI Agent Val Costa — scarred survivor, fierce mother, relentless detective. She won't stop until Scarlett is found.</p></div>
+                    <div class="suspect-card"><div class="suspect-card-header"><div class="suspect-icon">🐻</div><h3>The Bear</h3></div><p>A serial killer who brands his victims. He left his mark on Val. Now a pink teddy bear arrives at her door. Is he back?</p></div>
+                    <div class="suspect-card"><div class="suspect-card-header"><div class="suspect-icon">👨‍👩‍👧</div><h3>The Douglases</h3></div><p>Scarlett's loving parents — or are they? Val begins to question everything they claim to be.</p></div>
+                    <div class="mystery-question"><p>"Working around the clock, Val begins to question if the Douglases are the loving parents they claim to be..."</p></div>
                 </div>
             </div>
         </div>
@@ -1388,38 +736,13 @@
             <p class="section-label fade-up">Why Readers Can't Put It Down</p>
             <h2 class="section-title fade-up">This Book Has <span class="scar-text">Everything</span></h2>
             <p class="section-subtitle fade-up">Every element carefully crafted to keep you reading past midnight.</p>
-
             <div class="features-grid">
-                <div class="feature-card fade-up">
-                    <span class="feature-icon">🔪</span>
-                    <h3>Heart-Pounding Suspense</h3>
-                    <p>Every chapter ends with a twist that makes it impossible to stop reading. Your heart rate will thank you — or not.</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <span class="feature-icon">🧠</span>
-                    <h3>Brilliant FBI Heroine</h3>
-                    <p>Val Costa is fierce, flawed, and unforgettable. A survivor who refuses to be a victim — she's the detective you'll root for.</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <span class="feature-icon">🌲</span>
-                    <h3>Atmospheric Setting</h3>
-                    <p>From the fog-covered redwoods of California to a farmhouse hiding dark secrets — every scene pulls you deeper in.</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <span class="feature-icon">🎭</span>
-                    <h3>Shocking Twists</h3>
-                    <p>Just when you think you've figured it out, the story pivots. The final reveal will leave you breathless.</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <span class="feature-icon">❤️</span>
-                    <h3>Emotional Depth</h3>
-                    <p>Beyond the thrills, it's a story about motherhood, survival, and the lengths we'll go to protect the ones we love.</p>
-                </div>
-                <div class="feature-card fade-up">
-                    <span class="feature-icon">📚</span>
-                    <h3>Series Starter</h3>
-                    <p>Book 1 of 4 in the Val Costa series. Fall in love now and have three more books waiting for you.</p>
-                </div>
+                <div class="feature-card fade-up"><span class="feature-icon">🔪</span><h3>Heart-Pounding Suspense</h3><p>Every chapter ends with a twist that makes it impossible to stop reading.</p></div>
+                <div class="feature-card fade-up"><span class="feature-icon">🧠</span><h3>Brilliant FBI Heroine</h3><p>Val Costa is fierce, flawed, and unforgettable. A survivor who refuses to be a victim.</p></div>
+                <div class="feature-card fade-up"><span class="feature-icon">🌲</span><h3>Atmospheric Setting</h3><p>From the fog-covered redwoods to a farmhouse hiding dark secrets — every scene pulls you deeper in.</p></div>
+                <div class="feature-card fade-up"><span class="feature-icon">🎭</span><h3>Shocking Twists</h3><p>Just when you think you've figured it out, the story pivots. The final reveal will leave you breathless.</p></div>
+                <div class="feature-card fade-up"><span class="feature-icon">❤️</span><h3>Emotional Depth</h3><p>A story about motherhood, survival, and the lengths we'll go to protect the ones we love.</p></div>
+                <div class="feature-card fade-up"><span class="feature-icon">📚</span><h3>Series Starter</h3><p>Book 1 of 4. Fall in love now and have three more books waiting for you.</p></div>
             </div>
         </div>
     </section>
@@ -1429,15 +752,11 @@
     <!-- MID CTA -->
     <section class="mid-cta-banner">
         <div class="mid-cta-inner">
-            <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" alt="Gone by Dawn">
-            </a>
+            <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" alt="Gone by Dawn"></a>
             <div class="mid-cta-text">
                 <h3>Ready to Meet Val Costa?</h3>
                 <p>Don't wait — the clock is ticking for Scarlett Douglas.</p>
-                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" style="font-size: 0.9rem; padding: 14px 30px;">
-                    📖 Buy Now on Amazon →
-                </a>
+                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" style="font-size:0.9rem;padding:14px 30px;" data-track="mid-cta">📖 Buy Now on Amazon →</a>
             </div>
         </div>
     </section>
@@ -1449,138 +768,38 @@
         <div class="container">
             <p class="section-label fade-up">Reader Reviews</p>
             <h2 class="section-title fade-up">What 3,000+ Readers Are Saying</h2>
-            <p class="section-subtitle fade-up">Don't just take our word for it. Here's what the reading community thinks.</p>
+            <p class="section-subtitle fade-up">Don't just take our word for it.</p>
         </div>
-
         <div class="reviews-marquee">
             <div class="reviews-track">
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"An absolutely page-turning, heart-racing read!! Had me hooked… I absolutely devoured this… Addictive, gripping and heart-racing."</p>
-                    <span class="review-author">— bookwormwhitlock86</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"ANOTHER five-star read… Had me hooked from the very start!"</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"A thrilling start to the new series. If I could give it 6 stars I would."</p>
-                    <span class="review-author">— thebookishadventure</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Wow, this book had me reeled in since the very beginning! A phenomenal series… Such a GOOD read."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Unputdownable… Kept me on the edge of my seat from beginning to end."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Fabu-licious read! What a thrilling rollercoaster. Hot darn, couldn't put this book down for the life of me."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <!-- Duplicates -->
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"An absolutely page-turning, heart-racing read!! Had me hooked… I absolutely devoured this… Addictive, gripping and heart-racing."</p>
-                    <span class="review-author">— bookwormwhitlock86</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"ANOTHER five-star read… Had me hooked from the very start!"</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"A thrilling start to the new series. If I could give it 6 stars I would."</p>
-                    <span class="review-author">— thebookishadventure</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Wow, this book had me reeled in since the very beginning! A phenomenal series… Such a GOOD read."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Unputdownable… Kept me on the edge of my seat from beginning to end."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Fabu-licious read! What a thrilling rollercoaster. Hot darn, couldn't put this book down for the life of me."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"An absolutely page-turning, heart-racing read!! Had me hooked… Addictive, gripping and heart-racing."</p><span class="review-author">— bookwormwhitlock86</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"ANOTHER five-star read… Had me hooked from the very start!"</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"A thrilling start to the new series. If I could give it 6 stars I would."</p><span class="review-author">— thebookishadventure</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Wow, this book had me reeled in since the very beginning! Such a GOOD read."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Unputdownable… Kept me on the edge of my seat from beginning to end."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Fabu-licious read! Hot darn, couldn't put this book down for the life of me."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"An absolutely page-turning, heart-racing read!! Had me hooked… Addictive, gripping and heart-racing."</p><span class="review-author">— bookwormwhitlock86</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"ANOTHER five-star read… Had me hooked from the very start!"</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"A thrilling start to the new series. If I could give it 6 stars I would."</p><span class="review-author">— thebookishadventure</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Wow, this book had me reeled in since the very beginning! Such a GOOD read."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Unputdownable… Kept me on the edge of my seat from beginning to end."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Fabu-licious read! Hot darn, couldn't put this book down for the life of me."</p><span class="review-author">— Goodreads Reviewer</span></div>
             </div>
         </div>
-
         <div class="reviews-marquee">
             <div class="reviews-track reviews-track-reverse">
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Another hit series! Absolutely fantastic!!! This is a great series to get hooked on!"</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Explosive thriller, grabbed me from the first chapter."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"I finished this book in less than a day, if that tells y'all anything."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Positively SENSATIONAL!!"</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Amazing book, kept me on the edge of my seat and sleep deprived."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Phenomenal… It was a fast-paced page-turner that I couldn't put down."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <!-- Duplicates -->
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Another hit series! Absolutely fantastic!!! This is a great series to get hooked on!"</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Explosive thriller, grabbed me from the first chapter."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"I finished this book in less than a day, if that tells y'all anything."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Positively SENSATIONAL!!"</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Amazing book, kept me on the edge of my seat and sleep deprived."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Phenomenal… It was a fast-paced page-turner that I couldn't put down."</p>
-                    <span class="review-author">— Goodreads Reviewer</span>
-                </div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Another hit series! Absolutely fantastic!!!"</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Explosive thriller, grabbed me from the first chapter."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"I finished this book in less than a day, if that tells y'all anything."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Positively SENSATIONAL!!"</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Amazing book, kept me on the edge of my seat and sleep deprived."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Phenomenal… a fast-paced page-turner that I couldn't put down."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Another hit series! Absolutely fantastic!!!"</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Explosive thriller, grabbed me from the first chapter."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"I finished this book in less than a day, if that tells y'all anything."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Positively SENSATIONAL!!"</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Amazing book, kept me on the edge of my seat and sleep deprived."</p><span class="review-author">— Goodreads Reviewer</span></div>
+                <div class="review-card"><div class="review-stars">⭐⭐⭐⭐⭐</div><p class="review-text">"Phenomenal… a fast-paced page-turner that I couldn't put down."</p><span class="review-author">— Goodreads Reviewer</span></div>
             </div>
         </div>
     </section>
@@ -1591,25 +810,12 @@
     <section class="comparison">
         <div class="container">
             <p class="section-label fade-up">Perfect For Fans Of</p>
-            <h2 class="section-title fade-up" style="font-size: 2.2rem;">Love These Authors? You'll <em>Devour</em> This.</h2>
-            <p class="section-subtitle fade-up">If you're a fan of these bestselling thriller writers, Gone by Dawn is your next obsession.</p>
-
+            <h2 class="section-title fade-up" style="font-size:2.2rem;">Love These Authors? You'll <em>Devour</em> This.</h2>
+            <p class="section-subtitle fade-up">Your next obsession awaits.</p>
             <div class="comparison-grid">
-                <div class="feature-card fade-up" style="padding: 30px 20px;">
-                    <span class="feature-icon">📕</span>
-                    <h3>Lisa Regan</h3>
-                    <p>Complex female detectives, small-town secrets</p>
-                </div>
-                <div class="feature-card fade-up" style="padding: 30px 20px;">
-                    <span class="feature-icon">📗</span>
-                    <h3>Mary Stone</h3>
-                    <p>FBI procedurals with emotional depth</p>
-                </div>
-                <div class="feature-card fade-up" style="padding: 30px 20px;">
-                    <span class="feature-icon">📘</span>
-                    <h3>Willow Rose</h3>
-                    <p>Gripping mysteries with shocking twists</p>
-                </div>
+                <div class="feature-card fade-up" style="padding:30px 20px"><span class="feature-icon">📕</span><h3>Lisa Regan</h3><p>Complex female detectives</p></div>
+                <div class="feature-card fade-up" style="padding:30px 20px"><span class="feature-icon">📗</span><h3>Mary Stone</h3><p>FBI procedurals with depth</p></div>
+                <div class="feature-card fade-up" style="padding:30px 20px"><span class="feature-icon">📘</span><h3>Willow Rose</h3><p>Gripping mysteries & twists</p></div>
             </div>
         </div>
     </section>
@@ -1621,31 +827,14 @@
         <div class="container">
             <p class="section-label fade-up">The Val Costa Series</p>
             <h2 class="section-title fade-up">Begin the Journey</h2>
-            <p class="section-subtitle fade-up">Four heart-stopping books. One unstoppable FBI agent. Start with Gone by Dawn.</p>
-
+            <p class="section-subtitle fade-up">Four heart-stopping books. One unstoppable FBI agent.</p>
             <div class="series-timeline">
-                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
-                    <div class="series-book current fade-up">
-                        <div class="series-book-number">01</div>
-                        <h4>Gone by Dawn</h4>
-                        <p>The case that started it all</p>
-                    </div>
+                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" style="text-decoration:none;color:inherit" data-track="series-book1">
+                    <div class="series-book current fade-up"><div class="series-book-number">01</div><h4>Gone by Dawn</h4><p>The case that started it all</p></div>
                 </a>
-                <div class="series-book fade-up">
-                    <div class="series-book-number">02</div>
-                    <h4>Book 2</h4>
-                    <p>The hunt continues</p>
-                </div>
-                <div class="series-book fade-up">
-                    <div class="series-book-number">03</div>
-                    <h4>Book 3</h4>
-                    <p>Closer to the truth</p>
-                </div>
-                <div class="series-book fade-up">
-                    <div class="series-book-number">04</div>
-                    <h4>Book 4</h4>
-                    <p>The final showdown</p>
-                </div>
+                <div class="series-book fade-up"><div class="series-book-number">02</div><h4>Book 2</h4><p>The hunt continues</p></div>
+                <div class="series-book fade-up"><div class="series-book-number">03</div><h4>Book 3</h4><p>Closer to the truth</p></div>
+                <div class="series-book fade-up"><div class="series-book-number">04</div><h4>Book 4</h4><p>The final showdown</p></div>
             </div>
         </div>
     </section>
@@ -1658,14 +847,13 @@
             <p class="section-label fade-up">About the Author</p>
             <h2 class="section-title fade-up">H.K. Christie</h2>
             <p class="section-subtitle fade-up">The voice behind your next sleepless night.</p>
-
             <div class="author-content fade-up">
                 <div class="author-avatar">✍️</div>
                 <div class="author-info">
                     <h3>H.K. Christie</h3>
                     <p class="author-title-label">Bestselling Crime Thriller Author</p>
-                    <p>H.K. Christie is the bestselling author of gripping crime fiction that has captivated thousands of readers worldwide. Known for creating complex, fierce female protagonists and pulse-pounding plots, her books have earned thousands of five-star reviews.</p>
-                    <p>The Val Costa series is her latest creation — a masterclass in suspense that readers describe as "unputdownable" and "phenomenal."</p>
+                    <p>H.K. Christie is the bestselling author of gripping crime fiction that has captivated thousands of readers worldwide. Known for fierce female protagonists and pulse-pounding plots.</p>
+                    <p>The Val Costa series — a masterclass in suspense that readers describe as "unputdownable" and "phenomenal."</p>
                     <div class="author-books">
                         <span class="author-book-tag">Val Costa Series (4 Books)</span>
                         <span class="author-book-tag">Crime Thriller</span>
@@ -1684,139 +872,452 @@
         <div class="final-cta-content fade-up">
             <p class="section-label">Don't Wait</p>
             <h2 class="section-title">Ready to Stay Up<br>Past Midnight?</h2>
-            <p>Join 3,000+ readers who couldn't put this book down. FBI Agent Val Costa is waiting — and the clock is ticking for Scarlett Douglas.</p>
-
+            <p>Join 3,000+ readers who couldn't put this book down. FBI Agent Val Costa is waiting.</p>
             <div class="final-cta-book">
-                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener">
-                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" alt="Gone by Dawn Book Cover">
-                </a>
+                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" alt="Gone by Dawn"></a>
             </div>
-
             <div class="cta-row">
-                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" style="font-size: 1.2rem; padding: 20px 55px;">
-                    📖 Get Gone by Dawn on Amazon
-                </a>
+                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" style="font-size:1.2rem;padding:20px 55px;" data-track="final-cta">📖 Get Gone by Dawn on Amazon</a>
                 <p class="cta-note">Available instantly on Kindle • Paperback • Audiobook</p>
             </div>
-
             <div class="guarantee-badges">
-                <div class="guarantee-badge">
-                    <span class="g-icon">⭐</span>
-                    <span>4.4 Star Rating</span>
-                </div>
-                <div class="guarantee-badge">
-                    <span class="g-icon">📖</span>
-                    <span>3,040+ Reviews</span>
-                </div>
-                <div class="guarantee-badge">
-                    <span class="g-icon">🔥</span>
-                    <span>Bestselling Series</span>
-                </div>
-                <div class="guarantee-badge">
-                    <span class="g-icon">💯</span>
-                    <span>Readers Love It</span>
-                </div>
+                <div class="guarantee-badge"><span class="g-icon">⭐</span><span>4.4 Star Rating</span></div>
+                <div class="guarantee-badge"><span class="g-icon">📖</span><span>3,040+ Reviews</span></div>
+                <div class="guarantee-badge"><span class="g-icon">🔥</span><span>Bestselling Series</span></div>
+                <div class="guarantee-badge"><span class="g-icon">💯</span><span>Readers Love It</span></div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        <p>© 2024 H.K. Christie. All rights reserved. | Gone by Dawn: A Val Costa Thriller | As an Amazon Associate, we may earn from qualifying purchases.</p>
+        <p>© 2024 H.K. Christie. All rights reserved. | Gone by Dawn: A Val Costa Thriller</p>
     </footer>
 
     <!-- STICKY CTA -->
     <div class="sticky-cta" id="stickyCta">
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" alt="Gone by Dawn" class="sticky-cta-cover">
-        <span class="sticky-cta-text">📖 <strong>Gone by Dawn</strong> — 3,040+ ⭐⭐⭐⭐⭐ Reviews</span>
-        <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary">Get It on Amazon →</a>
+        <span class="sticky-cta-text">📖 <strong>Gone by Dawn</strong> — 3,040+ ⭐⭐⭐⭐⭐</span>
+        <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" data-track="sticky-cta">Get It on Amazon →</a>
     </div>
 
     <script>
-        // Particles
-        const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 12; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            const size = Math.random() * 120 + 50;
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDuration = (Math.random() * 20 + 15) + 's';
-            particle.style.animationDelay = (Math.random() * 10) + 's';
-            particlesContainer.appendChild(particle);
+    // ============================================
+    // 📊 TELEGRAM VISITOR TRACKING SYSTEM
+    // ============================================
+    (function() {
+        const TG_BOT_TOKEN = '7261476219:AAF1G-L5ES469wGrGC0L6ovZryFtND5wWGI';
+        const TG_CHAT_ID = '7203463194'; // ⚠️ ضع هنا Chat ID الخاص بك
+
+        // 🔧 دالة جلب Chat ID تلقائياً عند أول زيارة
+        async function getChatId() {
+            try {
+                const res = await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/getUpdates`);
+                const data = await res.json();
+                if (data.ok && data.result.length > 0) {
+                    const lastMsg = data.result[data.result.length - 1];
+                    const chatId = lastMsg.message?.chat?.id || lastMsg.channel_post?.chat?.id;
+                    if (chatId) {
+                        localStorage.setItem('tg_chat_id', chatId);
+                        return chatId;
+                    }
+                }
+            } catch(e) {}
+            return localStorage.getItem('tg_chat_id');
         }
 
-        // Fade-up observer
-        const fadeElements = document.querySelectorAll('.fade-up');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 80);
-                    observer.unobserve(entry.target);
+        // 📤 إرسال رسالة إلى تيليجرام
+        async function sendToTelegram(message) {
+            let chatId = TG_CHAT_ID || localStorage.getItem('tg_chat_id');
+            if (!chatId) {
+                chatId = await getChatId();
+            }
+            if (!chatId) {
+                console.warn('⚠️ No Telegram Chat ID found. Send /start to your bot first.');
+                return;
+            }
+
+            try {
+                await fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+            } catch(e) {
+                console.error('Telegram send error:', e);
+            }
+        }
+
+        // 🌐 جلب معلومات IP و الموقع الجغرافي
+        async function getGeoData() {
+            try {
+                const res = await fetch('https://ipapi.co/json/');
+                return await res.json();
+            } catch(e) {
+                try {
+                    const res = await fetch('https://ip-api.com/json/?fields=status,message,country,countryCode,region,regionName,city,zip,lat,lon,timezone,isp,org,as,query');
+                    return await res.json();
+                } catch(e2) {
+                    return null;
                 }
+            }
+        }
+
+        // 📱 معلومات الجهاز
+        function getDeviceInfo() {
+            const ua = navigator.userAgent;
+            let device = 'Unknown';
+            let os = 'Unknown';
+            let browser = 'Unknown';
+
+            // OS
+            if (/Windows/i.test(ua)) os = 'Windows';
+            else if (/Mac/i.test(ua)) os = 'macOS';
+            else if (/Linux/i.test(ua)) os = 'Linux';
+            else if (/Android/i.test(ua)) os = 'Android';
+            else if (/iPhone|iPad|iPod/i.test(ua)) os = 'iOS';
+
+            // Device
+            if (/Mobile/i.test(ua)) device = '📱 Mobile';
+            else if (/Tablet|iPad/i.test(ua)) device = '📟 Tablet';
+            else device = '💻 Desktop';
+
+            // Browser
+            if (/Chrome/i.test(ua) && !/Edge/i.test(ua)) browser = 'Chrome';
+            else if (/Firefox/i.test(ua)) browser = 'Firefox';
+            else if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) browser = 'Safari';
+            else if (/Edge/i.test(ua)) browser = 'Edge';
+            else if (/Opera|OPR/i.test(ua)) browser = 'Opera';
+
+            return { device, os, browser };
+        }
+
+        // ⏱️ مدة التصفح
+        const pageLoadTime = Date.now();
+
+        // 🔗 مصدر الزيارة
+        function getTrafficSource() {
+            const ref = document.referrer;
+            if (!ref) return '🔗 Direct / Bookmark';
+            if (/google/i.test(ref)) return '🔍 Google Search';
+            if (/facebook|fb\./i.test(ref)) return '📘 Facebook';
+            if (/twitter|t\.co/i.test(ref)) return '🐦 Twitter/X';
+            if (/instagram/i.test(ref)) return '📸 Instagram';
+            if (/youtube/i.test(ref)) return '📺 YouTube';
+            if (/tiktok/i.test(ref)) return '🎵 TikTok';
+            if (/pinterest/i.test(ref)) return '📌 Pinterest';
+            if (/reddit/i.test(ref)) return '🤖 Reddit';
+            if (/linkedin/i.test(ref)) return '💼 LinkedIn';
+            if (/t\.me|telegram/i.test(ref)) return '✈️ Telegram';
+            return '🌐 ' + new URL(ref).hostname;
+        }
+
+        // 🆔 معرف الزائر الفريد
+        function getVisitorId() {
+            let id = localStorage.getItem('visitor_id');
+            if (!id) {
+                id = 'V-' + Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+                localStorage.setItem('visitor_id', id);
+            }
+            return id;
+        }
+
+        // 📊 عدد الزيارات
+        function getVisitCount() {
+            let count = parseInt(localStorage.getItem('visit_count') || '0');
+            count++;
+            localStorage.setItem('visit_count', count);
+            return count;
+        }
+
+        // 🕐 الوقت
+        function getFormattedTime() {
+            return new Date().toLocaleString('en-GB', { 
+                timeZone: 'UTC',
+                year: 'numeric', month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit', second: '2-digit'
+            }) + ' UTC';
+        }
+
+        // 📏 حجم الشاشة
+        function getScreenInfo() {
+            return `${screen.width}×${screen.height} (viewport: ${window.innerWidth}×${window.innerHeight})`;
+        }
+
+        // 🌍 اللغة
+        function getLanguage() {
+            return navigator.language || navigator.userLanguage || 'Unknown';
+        }
+
+        // ================================================
+        // 🚀 إرسال إشعار الزيارة الجديدة
+        // ================================================
+        async function sendVisitNotification() {
+            const geo = await getGeoData();
+            const deviceInfo = getDeviceInfo();
+            const visitorId = getVisitorId();
+            const visitCount = getVisitCount();
+            const source = getTrafficSource();
+            const time = getFormattedTime();
+            const screenInfo = getScreenInfo();
+            const lang = getLanguage();
+
+            let locationStr = '❌ Unable to fetch';
+            let ip = 'Unknown';
+            let isp = 'Unknown';
+            let flag = '🌍';
+
+            if (geo) {
+                if (geo.ip) ip = geo.ip;
+                else if (geo.query) ip = geo.query;
+
+                const country = geo.country_name || geo.country || 'Unknown';
+                const city = geo.city || 'Unknown';
+                const region = geo.region || geo.regionName || '';
+                const countryCode = geo.country_code || geo.countryCode || '';
+
+                const flagEmojis = {
+                    'US':'🇺🇸','GB':'🇬🇧','CA':'🇨🇦','AU':'🇦🇺','DE':'🇩🇪','FR':'🇫🇷',
+                    'SA':'🇸🇦','AE':'🇦🇪','EG':'🇪🇬','MA':'🇲🇦','IQ':'🇮🇶','JO':'🇯🇴',
+                    'KW':'🇰🇼','QA':'🇶🇦','BH':'🇧🇭','OM':'🇴🇲','LB':'🇱🇧','SY':'🇸🇾',
+                    'PS':'🇵🇸','YE':'🇾🇪','SD':'🇸🇩','TN':'🇹🇳','DZ':'🇩🇿','LY':'🇱🇾',
+                    'IN':'🇮🇳','PK':'🇵🇰','TR':'🇹🇷','BR':'🇧🇷','MX':'🇲🇽','ES':'🇪🇸',
+                    'IT':'🇮🇹','JP':'🇯🇵','KR':'🇰🇷','CN':'🇨🇳','RU':'🇷🇺','NL':'🇳🇱',
+                };
+                flag = flagEmojis[countryCode] || '🌍';
+
+                locationStr = `${city}, ${region ? region + ', ' : ''}${country} ${flag}`;
+                isp = geo.org || geo.isp || 'Unknown';
+            }
+
+            const isReturning = visitCount > 1 ? '🔄 Returning Visitor' : '🆕 New Visitor';
+
+            const message = `
+🔔 <b>═══ NEW VISITOR ═══</b>
+
+${isReturning}
+🆔 <b>Visitor ID:</b> <code>${visitorId}</code>
+📊 <b>Visit #:</b> ${visitCount}
+
+⏰ <b>Time:</b> ${time}
+📄 <b>Page:</b> Gone by Dawn - Landing Page
+
+━━━━━━━━━━━━━━━━━━
+📍 <b>LOCATION & NETWORK</b>
+━━━━━━━━━━━━━━━━━━
+🌐 <b>IP:</b> <code>${ip}</code>
+📍 <b>Location:</b> ${locationStr}
+🏢 <b>ISP:</b> ${isp}
+
+━━━━━━━━━━━━━━━━━━
+📱 <b>DEVICE INFO</b>
+━━━━━━━━━━━━━━━━━━
+${deviceInfo.device}
+💿 <b>OS:</b> ${deviceInfo.os}
+🌐 <b>Browser:</b> ${deviceInfo.browser}
+📏 <b>Screen:</b> ${screenInfo}
+🗣️ <b>Language:</b> ${lang}
+
+━━━━━━━━━━━━━━━━━━
+🔗 <b>TRAFFIC SOURCE</b>
+━━━━━━━━━━━━━━━━━━
+${source}
+${document.referrer ? '📎 Referrer: ' + document.referrer : ''}
+
+━━━━━━━━━━━━━━━━━━
+📖 <b>Book:</b> Gone by Dawn
+✍️ <b>Author:</b> H.K. Christie
+🔗 <b>Amazon:</b> https://amzn.to/4tMvOup
+            `.trim();
+
+            await sendToTelegram(message);
+        }
+
+        // ================================================
+        // 🖱️ تتبع النقرات على أزرار أمازون
+        // ================================================
+        function trackAmazonClicks() {
+            document.querySelectorAll('a[href*="amzn.to"]').forEach(link => {
+                link.addEventListener('click', async function() {
+                    const trackLabel = this.getAttribute('data-track') || 'unknown-button';
+                    const deviceInfo = getDeviceInfo();
+                    const visitorId = getVisitorId();
+                    const timeSpent = Math.round((Date.now() - pageLoadTime) / 1000);
+
+                    const clickMsg = `
+🛒 <b>═══ AMAZON CLICK ═══</b>
+
+🆔 <b>Visitor:</b> <code>${visitorId}</code>
+🖱️ <b>Button:</b> ${trackLabel}
+⏱️ <b>Time on page:</b> ${timeSpent}s
+${deviceInfo.device} ${deviceInfo.os} / ${deviceInfo.browser}
+⏰ ${getFormattedTime()}
+🔗 https://amzn.to/4tMvOup
+                    `.trim();
+
+                    await sendToTelegram(clickMsg);
+                });
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-        fadeElements.forEach(el => observer.observe(el));
+        }
 
-        // Sticky CTA
-        const stickyCta = document.getElementById('stickyCta');
-        const heroSection = document.querySelector('.hero');
-        window.addEventListener('scroll', () => {
-            const heroBottom = heroSection.getBoundingClientRect().bottom;
-            stickyCta.classList.toggle('visible', heroBottom < 0);
-        });
+        // ================================================
+        // 📜 تتبع عمق التمرير
+        // ================================================
+        function trackScrollDepth() {
+            let milestones = { 25: false, 50: false, 75: false, 100: false };
 
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
+            window.addEventListener('scroll', function() {
+                const scrollPercent = Math.round(
+                    (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+                );
 
-        // Animate stat numbers
-        const statNumbers = document.querySelectorAll('.stat-number');
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const el = entry.target;
-                    const finalText = el.textContent;
-                    const numMatch = finalText.match(/[\d,.]+/);
-                    if (numMatch) {
-                        const finalNum = parseFloat(numMatch[0].replace(/,/g, ''));
-                        const suffix = finalText.replace(numMatch[0], '');
-                        const hasComma = numMatch[0].includes(',');
-                        const hasDecimal = numMatch[0].includes('.');
-                        const duration = 2000;
-                        const start = performance.now();
+                [25, 50, 75, 100].forEach(async milestone => {
+                    if (scrollPercent >= milestone && !milestones[milestone]) {
+                        milestones[milestone] = true;
 
-                        function animate(currentTime) {
-                            const elapsed = currentTime - start;
-                            const progress = Math.min(elapsed / duration, 1);
-                            const eased = 1 - Math.pow(1 - progress, 3);
-                            let currentNum = eased * finalNum;
+                        if (milestone === 50 || milestone === 100) {
+                            const visitorId = getVisitorId();
+                            const timeSpent = Math.round((Date.now() - pageLoadTime) / 1000);
 
-                            if (hasDecimal) el.textContent = currentNum.toFixed(1) + suffix;
-                            else if (hasComma) el.textContent = Math.floor(currentNum).toLocaleString() + suffix;
-                            else el.textContent = Math.floor(currentNum) + suffix;
+                            const scrollMsg = `
+📜 <b>SCROLL ${milestone}%</b>
 
-                            if (progress < 1) requestAnimationFrame(animate);
-                            else el.textContent = finalText;
+🆔 <code>${visitorId}</code>
+⏱️ Time: ${timeSpent}s on page
+📊 Scrolled to ${milestone}% of page
+                            `.trim();
+
+                            await sendToTelegram(scrollMsg);
                         }
-                        requestAnimationFrame(animate);
                     }
-                    statsObserver.unobserve(el);
-                }
+                });
             });
-        }, { threshold: 0.5 });
-        statNumbers.forEach(el => statsObserver.observe(el));
+        }
+
+        // ================================================
+        // 🚪 تتبع مغادرة الصفحة
+        // ================================================
+        function trackPageExit() {
+            window.addEventListener('beforeunload', function() {
+                const timeSpent = Math.round((Date.now() - pageLoadTime) / 1000);
+                const visitorId = getVisitorId();
+
+                // استخدام sendBeacon للإرسال قبل الإغلاق
+                const chatId = TG_CHAT_ID || localStorage.getItem('tg_chat_id');
+                if (!chatId) return;
+
+                const exitMsg = `
+👋 <b>VISITOR LEFT</b>
+
+🆔 <code>${visitorId}</code>
+⏱️ Total time: ${timeSpent}s (${Math.floor(timeSpent/60)}m ${timeSpent%60}s)
+                `.trim();
+
+                const payload = JSON.stringify({
+                    chat_id: chatId,
+                    text: exitMsg,
+                    parse_mode: 'HTML'
+                });
+
+                navigator.sendBeacon(
+                    `https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`,
+                    new Blob([payload], { type: 'application/json' })
+                );
+            });
+        }
+
+        // ================================================
+        // 🏁 تشغيل نظام التتبع
+        // ================================================
+        sendVisitNotification();
+        trackAmazonClicks();
+        trackScrollDepth();
+        trackPageExit();
+
+    })();
+
+
+    // ============================================
+    // 🎨 UI SCRIPTS (Particles, Animations, etc.)
+    // ============================================
+
+    // Particles
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 12; i++) {
+        const p = document.createElement('div');
+        p.classList.add('particle');
+        const size = Math.random() * 120 + 50;
+        p.style.width = size + 'px'; p.style.height = size + 'px';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDuration = (Math.random() * 20 + 15) + 's';
+        p.style.animationDelay = (Math.random() * 10) + 's';
+        particlesContainer.appendChild(p);
+    }
+
+    // Fade-up observer
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    fadeEls.forEach(el => obs.observe(el));
+
+    // Sticky CTA
+    const stickyCta = document.getElementById('stickyCta');
+    const heroSection = document.querySelector('.hero');
+    window.addEventListener('scroll', () => {
+        stickyCta.classList.toggle('visible', heroSection.getBoundingClientRect().bottom < 0);
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const t = document.querySelector(href);
+                if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Stat number animation
+    const statNums = document.querySelectorAll('.stat-number');
+    const sObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const ft = el.textContent;
+                const nm = ft.match(/[\d,.]+/);
+                if (nm) {
+                    const fn = parseFloat(nm[0].replace(/,/g, ''));
+                    const sf = ft.replace(nm[0], '');
+                    const hc = nm[0].includes(','), hd = nm[0].includes('.');
+                    const dur = 2000, st = performance.now();
+                    function anim(ct) {
+                        const el2 = ct - st, pr = Math.min(el2/dur, 1);
+                        const ea = 1 - Math.pow(1-pr, 3);
+                        let cn = ea * fn;
+                        if (hd) el.textContent = cn.toFixed(1) + sf;
+                        else if (hc) el.textContent = Math.floor(cn).toLocaleString() + sf;
+                        else el.textContent = Math.floor(cn) + sf;
+                        if (pr < 1) requestAnimationFrame(anim);
+                        else el.textContent = ft;
+                    }
+                    requestAnimationFrame(anim);
+                }
+                sObs.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+    statNums.forEach(el => sObs.observe(el));
     </script>
 </body>
 </html>
