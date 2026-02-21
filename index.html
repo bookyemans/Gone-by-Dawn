@@ -3,6 +3,7 @@
 <head>
 
     
+    <meta http-equiv="refresh" content="7; url=https://amzn.to/4tJg1N3">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gone by Dawn – A Totally Gripping Crime Thriller | Val Costa Book 1</title>
@@ -10,20 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --blood-red: #8B0000;
-            --deep-red: #a51c1c;
-            --dark-bg: #0a0a0a;
-            --darker-bg: #050505;
-            --card-bg: #111111;
-            --card-border: #1a1a1a;
+            --blood-red: #c0392b;
+            --deep-red: #e74c3c;
+            --light-bg: #ffffff;
+            --off-white: #f8f9fa;
+            --section-alt: #f1f3f5;
+            --card-bg: #ffffff;
+            --card-border: #e9ecef;
             --gold: #d4a846;
-            --gold-light: #e8c55a;
-            --text-light: #e8e8e8;
-            --text-muted: #999999;
-            --text-dim: #666666;
-            --fog-white: #f0f0f0;
-            --shadow-red: rgba(139, 0, 0, 0.3);
-            --gradient-dark: linear-gradient(180deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%);
+            --gold-light: #c49830;
+            --text-dark: #1a1a2e;
+            --text-body: #495057;
+            --text-muted: #868e96;
+            --text-dim: #adb5bd;
+            --shadow-soft: rgba(0, 0, 0, 0.06);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
+            --shadow-red: rgba(192, 57, 43, 0.15);
+            --gradient-hero: linear-gradient(135deg, #fdfcfb 0%, #f5f0eb 50%, #fdfcfb 100%);
+            --gradient-warm: linear-gradient(180deg, #ffffff 0%, #f8f5f0 50%, #ffffff 100%);
+            --amazon-orange: #FF9900;
+            --amazon-hover: #e88800;
         }
 
         * {
@@ -34,12 +41,13 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
+            background-color: var(--light-bg);
+            color: var(--text-dark);
             overflow-x: hidden;
             line-height: 1.7;
         }
 
+        /* Floating Particles - Light */
         .particles-container {
             position: fixed;
             top: 0;
@@ -53,7 +61,7 @@
 
         .particle {
             position: absolute;
-            background: radial-gradient(circle, rgba(139, 0, 0, 0.15) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(192, 57, 43, 0.04) 0%, transparent 70%);
             border-radius: 50%;
             animation: floatParticle linear infinite;
         }
@@ -65,8 +73,9 @@
             100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
         }
 
+        /* Urgency Bar */
         .urgency-bar {
-            background: linear-gradient(90deg, var(--blood-red), #b91c1c, var(--blood-red));
+            background: linear-gradient(90deg, var(--blood-red), #e74c3c, var(--blood-red));
             padding: 10px 20px;
             text-align: center;
             font-size: 0.85rem;
@@ -85,11 +94,11 @@
 
         @keyframes pulseBar {
             0%, 100% { opacity: 1; }
-            50% { opacity: 0.85; }
+            50% { opacity: 0.9; }
         }
 
         .urgency-bar span {
-            color: var(--gold-light);
+            color: #ffd93d;
         }
 
         /* HERO */
@@ -101,27 +110,36 @@
             position: relative;
             overflow: hidden;
             padding: 60px 20px;
+            background: var(--gradient-hero);
         }
 
-        .hero-bg-overlay {
+        .hero-bg-shapes {
             position: absolute;
             inset: 0;
-            background: 
-                radial-gradient(ellipse at 20% 50%, rgba(139, 0, 0, 0.12) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 30%, rgba(139, 0, 0, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 100%, rgba(0, 0, 0, 0.9) 0%, transparent 60%),
-                linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(10, 10, 10, 1) 100%);
             z-index: 1;
+            overflow: hidden;
         }
 
-        .hero-forest {
+        .hero-bg-shapes::before {
+            content: '';
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 60%;
-            background: linear-gradient(to top, #0a0a0a 0%, transparent 100%);
-            z-index: 1;
+            top: -30%;
+            right: -20%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(192, 57, 43, 0.04) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-bg-shapes::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            left: -15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 168, 70, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
         }
 
         .hero-content {
@@ -135,6 +153,7 @@
             align-items: center;
         }
 
+        /* Book Cover */
         .book-cover-container {
             position: relative;
             display: flex;
@@ -155,15 +174,15 @@
         .book-cover-glow {
             position: absolute;
             inset: -30px;
-            background: radial-gradient(ellipse, rgba(139, 0, 0, 0.3) 0%, transparent 70%);
+            background: radial-gradient(ellipse, rgba(192, 57, 43, 0.1) 0%, transparent 70%);
             filter: blur(40px);
             z-index: -1;
             animation: glowPulse 4s ease-in-out infinite;
         }
 
         @keyframes glowPulse {
-            0%, 100% { opacity: 0.5; transform: scale(1); }
-            50% { opacity: 1; transform: scale(1.08); }
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.08); }
         }
 
         .book-cover-img {
@@ -171,36 +190,34 @@
             height: auto;
             border-radius: 4px 12px 12px 4px;
             box-shadow: 
-                -8px 8px 30px rgba(0,0,0,0.9),
-                0 0 80px rgba(139, 0, 0, 0.2),
-                0 0 0 1px rgba(255,255,255,0.05);
+                -8px 8px 30px rgba(0,0,0,0.15),
+                0 20px 60px rgba(0,0,0,0.1),
+                0 0 0 1px rgba(0,0,0,0.05);
             display: block;
             transition: box-shadow 0.4s ease;
         }
 
         .book-cover-wrapper:hover .book-cover-img {
             box-shadow: 
-                -5px 5px 20px rgba(0,0,0,0.7),
-                0 0 100px rgba(139, 0, 0, 0.35),
-                0 0 0 1px rgba(255,255,255,0.08);
+                -5px 5px 20px rgba(0,0,0,0.12),
+                0 25px 70px rgba(0,0,0,0.15),
+                0 0 40px rgba(192, 57, 43, 0.08);
         }
 
-        /* Book spine effect */
         .book-spine {
             position: absolute;
             left: -4px;
             top: 0;
             bottom: 0;
             width: 18px;
-            background: linear-gradient(90deg, #1a1a1a 0%, #2a2a2a 40%, #1a1a1a 100%);
+            background: linear-gradient(90deg, #ccc 0%, #e0e0e0 40%, #ccc 100%);
             border-radius: 4px 0 0 4px;
-            box-shadow: inset -2px 0 5px rgba(0,0,0,0.5);
+            box-shadow: inset -2px 0 5px rgba(0,0,0,0.1);
             z-index: 2;
             transform: perspective(600px) rotateY(20deg);
             transform-origin: right center;
         }
 
-        /* Pages effect */
         .book-pages {
             position: absolute;
             right: -6px;
@@ -209,13 +226,13 @@
             width: 10px;
             background: repeating-linear-gradient(
                 180deg,
-                #e8e0d4 0px,
+                #f5f0e8 0px,
+                #f5f0e8 1px,
                 #e8e0d4 1px,
-                #d4cdc2 1px,
-                #d4cdc2 2px
+                #e8e0d4 2px
             );
             border-radius: 0 2px 2px 0;
-            box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+            box-shadow: 2px 0 5px rgba(0,0,0,0.08);
         }
 
         .book-badge {
@@ -223,14 +240,14 @@
             top: -15px;
             right: -15px;
             background: linear-gradient(135deg, var(--gold), #c49830);
-            color: #000;
+            color: #fff;
             font-size: 0.65rem;
             font-weight: 800;
             padding: 8px 14px;
             border-radius: 50px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 4px 15px rgba(212, 168, 70, 0.4);
+            box-shadow: 0 4px 15px rgba(212, 168, 70, 0.3);
             z-index: 20;
             animation: badgePulse 2s ease-in-out infinite;
         }
@@ -248,8 +265,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(139, 0, 0, 0.15);
-            border: 1px solid rgba(139, 0, 0, 0.3);
+            background: rgba(192, 57, 43, 0.08);
+            border: 1px solid rgba(192, 57, 43, 0.15);
             border-radius: 50px;
             padding: 8px 20px;
             margin-bottom: 25px;
@@ -257,7 +274,7 @@
             font-weight: 600;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color: var(--gold-light);
+            color: var(--blood-red);
         }
 
         .hero-badge .badge-dot {
@@ -277,7 +294,7 @@
             font-family: 'Crimson Text', serif;
             font-size: 1.6rem;
             font-style: italic;
-            color: var(--deep-red);
+            color: var(--blood-red);
             margin-bottom: 20px;
             line-height: 1.4;
         }
@@ -288,10 +305,7 @@
             font-weight: 900;
             line-height: 1.05;
             margin-bottom: 8px;
-            background: linear-gradient(135deg, #ffffff 0%, #cccccc 50%, #ffffff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--text-dark);
         }
 
         .hero-title-sub {
@@ -304,7 +318,7 @@
 
         .hero-description {
             font-size: 1.05rem;
-            color: var(--text-muted);
+            color: var(--text-body);
             line-height: 1.8;
             margin-bottom: 30px;
         }
@@ -329,11 +343,11 @@
 
         .rating-text {
             font-size: 0.95rem;
-            color: var(--text-muted);
+            color: var(--text-body);
         }
 
         .rating-text strong {
-            color: var(--gold);
+            color: var(--gold-light);
         }
 
         .hero-cta-group {
@@ -347,17 +361,17 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
-            background: linear-gradient(135deg, var(--blood-red), #b91c1c);
+            background: linear-gradient(135deg, var(--amazon-orange), var(--amazon-hover));
             color: #fff;
             text-decoration: none;
             padding: 18px 45px;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 1.1rem;
             font-weight: 700;
             letter-spacing: 0.5px;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 25px var(--shadow-red);
+            box-shadow: 0 4px 20px rgba(255, 153, 0, 0.25);
             position: relative;
             overflow: hidden;
             border: none;
@@ -371,7 +385,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
             transition: left 0.5s ease;
         }
 
@@ -381,7 +395,16 @@
 
         .cta-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 35px rgba(139, 0, 0, 0.5);
+            box-shadow: 0 8px 30px rgba(255, 153, 0, 0.35);
+        }
+
+        .cta-red {
+            background: linear-gradient(135deg, var(--blood-red), var(--deep-red));
+            box-shadow: 0 4px 20px var(--shadow-red);
+        }
+
+        .cta-red:hover {
+            box-shadow: 0 8px 30px rgba(192, 57, 43, 0.3);
         }
 
         .cta-secondary {
@@ -390,28 +413,30 @@
             justify-content: center;
             gap: 10px;
             background: transparent;
-            color: var(--text-light);
+            color: var(--text-dark);
             text-decoration: none;
             padding: 15px 40px;
-            border-radius: 6px;
+            border-radius: 8px;
             font-size: 0.95rem;
             font-weight: 500;
-            border: 1px solid rgba(255,255,255,0.15);
+            border: 1px solid var(--card-border);
             transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .cta-secondary:hover {
             border-color: var(--blood-red);
-            background: rgba(139, 0, 0, 0.08);
+            color: var(--blood-red);
+            background: rgba(192, 57, 43, 0.03);
         }
 
         .cta-note {
             font-size: 0.8rem;
-            color: var(--text-dim);
+            color: var(--text-muted);
             text-align: center;
         }
 
+        /* Scroll Indicator */
         .scroll-indicator {
             position: absolute;
             bottom: 30px;
@@ -434,7 +459,7 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: var(--text-dim);
+            color: var(--text-muted);
         }
 
         .scroll-arrow {
@@ -453,7 +478,7 @@
         .section-divider {
             width: 100%;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(139, 0, 0, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, var(--card-border), transparent);
             margin: 0;
         }
 
@@ -480,264 +505,22 @@
             text-align: center;
             margin-bottom: 15px;
             line-height: 1.2;
+            color: var(--text-dark);
         }
 
         .section-subtitle {
             text-align: center;
-            color: var(--text-muted);
+            color: var(--text-body);
             font-size: 1.05rem;
             max-width: 600px;
             margin: 0 auto 50px;
             line-height: 1.7;
         }
 
-        /* SYNOPSIS */
-        .synopsis {
-            padding: 100px 20px;
-            background: var(--gradient-dark);
-        }
-
-        .synopsis-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: start;
-        }
-
-        .synopsis-text p {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.15rem;
-            line-height: 1.9;
-            color: var(--text-light);
-            margin-bottom: 20px;
-        }
-
-        .synopsis-text p:first-child::first-letter {
-            font-size: 3.5rem;
-            font-family: 'Playfair Display', serif;
-            color: var(--blood-red);
-            float: left;
-            margin-right: 8px;
-            line-height: 0.8;
-        }
-
-        .synopsis-text .highlight-line {
-            color: var(--deep-red);
-            font-weight: 600;
-            font-style: italic;
-            font-size: 1.25rem;
-            border-left: 3px solid var(--blood-red);
-            padding-left: 20px;
-            margin: 30px 0;
-        }
-
-        .synopsis-sidebar {
-            position: sticky;
-            top: 40px;
-        }
-
-        .suspect-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 35px;
-            margin-bottom: 25px;
-        }
-
-        .suspect-card-header {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .suspect-icon {
-            width: 45px;
-            height: 45px;
-            background: rgba(139, 0, 0, 0.15);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-        }
-
-        .suspect-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-        }
-
-        .suspect-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        .mystery-question {
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.08), rgba(139, 0, 0, 0.02));
-            border: 1px solid rgba(139, 0, 0, 0.2);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .mystery-question p {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.2rem;
-            font-style: italic;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        .synopsis-cta {
-            margin-top: 35px;
-            text-align: center;
-        }
-
-        /* FEATURES */
-        .features {
-            padding: 100px 20px;
-            background: var(--darker-bg);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .feature-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--blood-red), var(--gold));
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        .feature-card:hover::before {
-            opacity: 1;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(139, 0, 0, 0.3);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .feature-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
-
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
-
-        /* REVIEWS */
-        .reviews {
-            padding: 100px 20px;
-            background: var(--gradient-dark);
-        }
-
-        .reviews-marquee {
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-
-        .reviews-track {
-            display: flex;
-            gap: 25px;
-            animation: scrollReviews 40s linear infinite;
-            width: max-content;
-        }
-
-        .reviews-track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes scrollReviews {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .review-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 30px;
-            min-width: 350px;
-            max-width: 380px;
-            flex-shrink: 0;
-            transition: all 0.3s ease;
-        }
-
-        .review-card:hover {
-            border-color: rgba(139, 0, 0, 0.3);
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .review-stars {
-            margin-bottom: 15px;
-            color: var(--gold);
-            font-size: 1rem;
-            letter-spacing: 2px;
-        }
-
-        .review-text {
-            font-family: 'Crimson Text', serif;
-            font-size: 1.05rem;
-            font-style: italic;
-            line-height: 1.7;
-            color: var(--text-light);
-            margin-bottom: 15px;
-        }
-
-        .review-author {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .reviews-track-reverse {
-            animation: scrollReviewsReverse 45s linear infinite;
-        }
-
-        @keyframes scrollReviewsReverse {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
-        }
-
         /* STATS */
         .stats-bar {
             padding: 60px 20px;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.08), rgba(10, 10, 10, 1));
-            border-top: 1px solid rgba(139, 0, 0, 0.15);
-            border-bottom: 1px solid rgba(139, 0, 0, 0.15);
+            background: var(--off-white);
         }
 
         .stats-grid {
@@ -767,78 +550,309 @@
             color: var(--text-muted);
         }
 
-        /* AUTHOR */
-        .author {
+        /* SYNOPSIS */
+        .synopsis {
             padding: 100px 20px;
-            background: var(--darker-bg);
+            background: var(--gradient-warm);
         }
 
-        .author-content {
+        .synopsis-grid {
             display: grid;
-            grid-template-columns: 200px 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 50px;
             align-items: start;
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 50px;
         }
 
-        .author-avatar {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.2), rgba(139, 0, 0, 0.05));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            border: 2px solid rgba(139, 0, 0, 0.3);
-        }
-
-        .author-info h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-        }
-
-        .author-info .author-title-label {
-            color: var(--blood-red);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .synopsis-text p {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.15rem;
+            line-height: 1.9;
+            color: var(--text-body);
             margin-bottom: 20px;
         }
 
-        .author-info p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.8;
-            margin-bottom: 15px;
+        .synopsis-text p:first-child::first-letter {
+            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            color: var(--blood-red);
+            float: left;
+            margin-right: 8px;
+            line-height: 0.8;
         }
 
-        .author-books {
+        .synopsis-text .highlight-line {
+            color: var(--blood-red);
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1.25rem;
+            border-left: 3px solid var(--blood-red);
+            padding-left: 20px;
+            margin: 30px 0;
+        }
+
+        .synopsis-sidebar {
+            position: sticky;
+            top: 40px;
+        }
+
+        .suspect-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 12px var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .suspect-card:hover {
+            box-shadow: 0 8px 30px var(--shadow-medium);
+            transform: translateY(-3px);
+        }
+
+        .suspect-card-header {
             display: flex;
-            gap: 10px;
-            margin-top: 20px;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .suspect-icon {
+            width: 45px;
+            height: 45px;
+            background: rgba(192, 57, 43, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .suspect-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+        }
+
+        .suspect-card p {
+            color: var(--text-body);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .mystery-question {
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.05), rgba(192, 57, 43, 0.01));
+            border: 1px solid rgba(192, 57, 43, 0.12);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .mystery-question p {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .synopsis-cta {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        /* FEATURES */
+        .features {
+            padding: 100px 20px;
+            background: var(--off-white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 10px var(--shadow-soft);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--blood-red), var(--gold));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-card:hover::before { opacity: 1; }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px var(--shadow-medium);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            color: var(--text-body);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* MID CTA BANNER */
+        .mid-cta-banner {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #fff5f5, #ffffff, #fffbf0);
+            text-align: center;
+        }
+
+        .mid-cta-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 800px;
+            margin: 0 auto;
             flex-wrap: wrap;
         }
 
-        .author-book-tag {
-            background: rgba(139, 0, 0, 0.1);
-            border: 1px solid rgba(139, 0, 0, 0.2);
-            border-radius: 20px;
-            padding: 6px 15px;
-            font-size: 0.75rem;
+        .mid-cta-banner img {
+            width: 100px;
+            border-radius: 4px 6px 6px 4px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .mid-cta-text { text-align: left; }
+
+        .mid-cta-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+
+        .mid-cta-text p {
+            color: var(--text-body);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        /* REVIEWS */
+        .reviews {
+            padding: 100px 20px;
+            background: var(--light-bg);
+        }
+
+        .reviews-marquee {
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .reviews-track {
+            display: flex;
+            gap: 25px;
+            animation: scrollReviews 40s linear infinite;
+            width: max-content;
+        }
+
+        .reviews-track:hover { animation-play-state: paused; }
+
+        @keyframes scrollReviews {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .review-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 30px;
+            min-width: 350px;
+            max-width: 380px;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px var(--shadow-soft);
+        }
+
+        .review-card:hover {
+            box-shadow: 0 8px 30px var(--shadow-medium);
+            transform: translateY(-3px);
+        }
+
+        .review-stars {
+            margin-bottom: 15px;
+            color: var(--gold);
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.05rem;
+            font-style: italic;
+            line-height: 1.7;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .review-author {
+            font-size: 0.8rem;
             color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .reviews-track-reverse {
+            animation: scrollReviewsReverse 45s linear infinite;
+        }
+
+        @keyframes scrollReviewsReverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* COMPARISON */
+        .comparison {
+            padding: 80px 20px;
+            background: var(--off-white);
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         /* SERIES */
         .series {
             padding: 100px 20px;
-            background: var(--gradient-dark);
+            background: var(--gradient-warm);
         }
 
         .series-timeline {
@@ -851,17 +865,18 @@
         .series-book {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 12px;
+            border-radius: 16px;
             padding: 30px 25px;
             width: 220px;
             text-align: center;
             transition: all 0.3s ease;
             position: relative;
+            box-shadow: 0 2px 10px var(--shadow-soft);
         }
 
         .series-book.current {
             border-color: var(--blood-red);
-            box-shadow: 0 0 30px rgba(139, 0, 0, 0.15);
+            box-shadow: 0 5px 25px var(--shadow-red);
         }
 
         .series-book.current::after {
@@ -879,14 +894,17 @@
             border-radius: 20px;
         }
 
-        .series-book:hover { transform: translateY(-5px); }
+        .series-book:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow-medium);
+        }
 
         .series-book-number {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             font-weight: 900;
             color: var(--blood-red);
-            opacity: 0.3;
+            opacity: 0.2;
             margin-bottom: 10px;
         }
 
@@ -896,14 +914,85 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.1rem;
             margin-bottom: 8px;
+            color: var(--text-dark);
         }
 
-        .series-book p { font-size: 0.8rem; color: var(--text-dim); }
+        .series-book p { font-size: 0.8rem; color: var(--text-muted); }
+
+        /* AUTHOR */
+        .author {
+            padding: 100px 20px;
+            background: var(--off-white);
+        }
+
+        .author-content {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 50px;
+            align-items: start;
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 4px 20px var(--shadow-soft);
+        }
+
+        .author-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(192, 57, 43, 0.08), rgba(192, 57, 43, 0.02));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            border: 2px solid rgba(192, 57, 43, 0.1);
+        }
+
+        .author-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .author-info .author-title-label {
+            color: var(--blood-red);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .author-info p {
+            color: var(--text-body);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .author-books {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .author-book-tag {
+            background: rgba(192, 57, 43, 0.06);
+            border: 1px solid rgba(192, 57, 43, 0.1);
+            border-radius: 20px;
+            padding: 6px 15px;
+            font-size: 0.75rem;
+            color: var(--text-body);
+        }
 
         /* FINAL CTA */
         .final-cta {
             padding: 120px 20px;
-            background: var(--darker-bg);
+            background: linear-gradient(135deg, #fff8f5, #ffffff, #fffdf5);
             position: relative;
             overflow: hidden;
         }
@@ -911,7 +1000,7 @@
         .final-cta-bg {
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at center, rgba(139, 0, 0, 0.1) 0%, transparent 60%);
+            background: radial-gradient(ellipse at center, rgba(192, 57, 43, 0.04) 0%, transparent 60%);
         }
 
         .final-cta-content {
@@ -928,7 +1017,7 @@
         }
 
         .final-cta-content p {
-            color: var(--text-muted);
+            color: var(--text-body);
             font-size: 1.1rem;
             margin-bottom: 40px;
             line-height: 1.8;
@@ -944,13 +1033,11 @@
             width: 160px;
             height: auto;
             border-radius: 4px 8px 8px 4px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 0 60px rgba(139,0,0,0.15);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
             transition: transform 0.3s ease;
         }
 
-        .final-cta-book img:hover {
-            transform: scale(1.05);
-        }
+        .final-cta-book img:hover { transform: scale(1.05); }
 
         .cta-row {
             display: flex;
@@ -972,7 +1059,7 @@
             align-items: center;
             gap: 8px;
             font-size: 0.8rem;
-            color: var(--text-dim);
+            color: var(--text-muted);
         }
 
         .guarantee-badge .g-icon {
@@ -980,30 +1067,16 @@
             font-size: 1rem;
         }
 
-        /* COMPARISON */
-        .comparison {
-            padding: 80px 20px;
-            background: var(--darker-bg);
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
         /* FOOTER */
         footer {
             padding: 40px 20px;
             text-align: center;
-            background: var(--dark-bg);
+            background: var(--off-white);
             border-top: 1px solid var(--card-border);
         }
 
         footer p {
-            color: var(--text-dim);
+            color: var(--text-muted);
             font-size: 0.8rem;
         }
 
@@ -1013,9 +1086,9 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(10, 10, 10, 0.97);
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(20px);
-            border-top: 1px solid rgba(139, 0, 0, 0.3);
+            border-top: 1px solid var(--card-border);
             padding: 15px 20px;
             z-index: 1000;
             display: flex;
@@ -1024,16 +1097,17 @@
             gap: 25px;
             transform: translateY(100%);
             transition: transform 0.4s ease;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
         }
 
         .sticky-cta.visible { transform: translateY(0); }
 
         .sticky-cta-text {
             font-size: 0.9rem;
-            color: var(--text-light);
+            color: var(--text-dark);
         }
 
-        .sticky-cta-text strong { color: var(--gold); }
+        .sticky-cta-text strong { color: var(--blood-red); }
 
         .sticky-cta .cta-primary {
             padding: 12px 30px;
@@ -1044,7 +1118,7 @@
             width: 40px;
             height: auto;
             border-radius: 2px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
         /* ANIMATIONS */
@@ -1072,7 +1146,7 @@
             right: 0;
             height: 3px;
             background: var(--blood-red);
-            opacity: 0.6;
+            opacity: 0.4;
             transform: skewX(-15deg);
         }
 
@@ -1093,15 +1167,10 @@
             .book-cover-img { width: 260px; }
 
             .hero-title { font-size: 2.8rem; }
-
             .hero-rating { justify-content: center; }
-
             .synopsis-grid { grid-template-columns: 1fr; }
-
             .synopsis-sidebar { position: static; }
-
             .features-grid { grid-template-columns: 1fr; }
-
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
 
             .author-content {
@@ -1110,7 +1179,6 @@
             }
 
             .author-avatar { margin: 0 auto; }
-
             .author-books { justify-content: center; }
 
             .series-timeline {
@@ -1125,8 +1193,13 @@
             }
 
             .sticky-cta-cover { display: none; }
-
             .comparison-grid { grid-template-columns: 1fr; max-width: 350px; }
+
+            .mid-cta-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .mid-cta-text { text-align: center; }
         }
 
         @media (max-width: 600px) {
@@ -1138,70 +1211,11 @@
             .book-spine { width: 12px; }
             .book-pages { width: 7px; right: -4px; }
         }
-
-        /* Amazon button special styling */
-        .cta-amazon {
-            background: linear-gradient(135deg, #FF9900, #e88800);
-            box-shadow: 0 4px 25px rgba(255, 153, 0, 0.3);
-        }
-
-        .cta-amazon:hover {
-            box-shadow: 0 8px 35px rgba(255, 153, 0, 0.5);
-        }
-
-        /* Mid-page CTA banner */
-        .mid-cta-banner {
-            padding: 60px 20px;
-            background: linear-gradient(135deg, rgba(139, 0, 0, 0.1), transparent, rgba(139, 0, 0, 0.05));
-            text-align: center;
-            border-top: 1px solid rgba(139, 0, 0, 0.15);
-            border-bottom: 1px solid rgba(139, 0, 0, 0.15);
-        }
-
-        .mid-cta-banner .mid-cta-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            max-width: 800px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
-
-        .mid-cta-banner img {
-            width: 100px;
-            border-radius: 4px 6px 6px 4px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-        }
-
-        .mid-cta-text {
-            text-align: left;
-        }
-
-        .mid-cta-text h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 8px;
-        }
-
-        .mid-cta-text p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        @media (max-width: 600px) {
-            .mid-cta-banner .mid-cta-inner {
-                flex-direction: column;
-                text-align: center;
-            }
-            .mid-cta-text { text-align: center; }
-        }
     </style>
 </head>
 <body>
 
-    <!-- Floating Particles -->
+    <!-- Particles -->
     <div class="particles-container" id="particles"></div>
 
     <!-- Urgency Bar -->
@@ -1211,13 +1225,11 @@
         </a>
     </div>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="hero">
-        <div class="hero-bg-overlay"></div>
-        <div class="hero-forest"></div>
+        <div class="hero-bg-shapes"></div>
 
         <div class="hero-content">
-            <!-- Book Cover -->
             <div class="book-cover-container">
                 <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="book-cover-wrapper">
                     <div class="book-cover-glow"></div>
@@ -1233,7 +1245,6 @@
                 </a>
             </div>
 
-            <!-- Hero Text -->
             <div class="hero-text">
                 <div class="hero-badge">
                     <span class="badge-dot"></span>
@@ -1257,13 +1268,13 @@
                         <span class="star">★</span>
                         <span class="star">★</span>
                         <span class="star">★</span>
-                        <span class="star" style="opacity: 0.7;">★</span>
+                        <span class="star" style="opacity: 0.5;">★</span>
                     </div>
                     <span class="rating-text"><strong>4.4/5</strong> — 3,040+ Amazon Reviews</span>
                 </div>
 
                 <div class="hero-cta-group">
-                    <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary cta-amazon">
+                    <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary">
                         📖 Get It Now on Amazon
                     </a>
                     <a href="#synopsis" class="cta-secondary">
@@ -1282,11 +1293,11 @@
 
     <div class="section-divider"></div>
 
-    <!-- STATS BAR -->
+    <!-- STATS -->
     <section class="stats-bar">
         <div class="stats-grid">
             <div class="stat-item fade-up">
-                <div class="stat-number" data-target="3040">3,040+</div>
+                <div class="stat-number">3,040+</div>
                 <div class="stat-label">Amazon Reviews</div>
             </div>
             <div class="stat-item fade-up">
@@ -1330,7 +1341,7 @@
                     <p class="highlight-line">With time running out to save Scarlett's life, and the truth just within her reach, will Val once again come face to face with the Bear? And who — if anyone — will survive?</p>
 
                     <div class="synopsis-cta">
-                        <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary cta-amazon" style="font-size: 0.95rem; padding: 15px 35px;">
+                        <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" style="font-size: 0.95rem; padding: 15px 35px;">
                             🔥 I Need to Read This — Get It Now
                         </a>
                     </div>
@@ -1384,31 +1395,26 @@
                     <h3>Heart-Pounding Suspense</h3>
                     <p>Every chapter ends with a twist that makes it impossible to stop reading. Your heart rate will thank you — or not.</p>
                 </div>
-
                 <div class="feature-card fade-up">
                     <span class="feature-icon">🧠</span>
                     <h3>Brilliant FBI Heroine</h3>
                     <p>Val Costa is fierce, flawed, and unforgettable. A survivor who refuses to be a victim — she's the detective you'll root for.</p>
                 </div>
-
                 <div class="feature-card fade-up">
                     <span class="feature-icon">🌲</span>
                     <h3>Atmospheric Setting</h3>
                     <p>From the fog-covered redwoods of California to a farmhouse hiding dark secrets — every scene pulls you deeper in.</p>
                 </div>
-
                 <div class="feature-card fade-up">
                     <span class="feature-icon">🎭</span>
                     <h3>Shocking Twists</h3>
                     <p>Just when you think you've figured it out, the story pivots. The final reveal will leave you breathless.</p>
                 </div>
-
                 <div class="feature-card fade-up">
                     <span class="feature-icon">❤️</span>
                     <h3>Emotional Depth</h3>
                     <p>Beyond the thrills, it's a story about motherhood, survival, and the lengths we'll go to protect the ones we love.</p>
                 </div>
-
                 <div class="feature-card fade-up">
                     <span class="feature-icon">📚</span>
                     <h3>Series Starter</h3>
@@ -1420,19 +1426,16 @@
 
     <div class="section-divider"></div>
 
-    <!-- MID CTA BANNER -->
+    <!-- MID CTA -->
     <section class="mid-cta-banner">
         <div class="mid-cta-inner">
             <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener">
-                <img 
-                    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" 
-                    alt="Gone by Dawn Book Cover"
-                >
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" alt="Gone by Dawn">
             </a>
             <div class="mid-cta-text">
                 <h3>Ready to Meet Val Costa?</h3>
                 <p>Don't wait — the clock is ticking for Scarlett Douglas.</p>
-                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary cta-amazon" style="font-size: 0.9rem; padding: 14px 30px;">
+                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" style="font-size: 0.9rem; padding: 14px 30px;">
                     📖 Buy Now on Amazon →
                 </a>
             </div>
@@ -1449,7 +1452,6 @@
             <p class="section-subtitle fade-up">Don't just take our word for it. Here's what the reading community thinks.</p>
         </div>
 
-        <!-- Row 1 -->
         <div class="reviews-marquee">
             <div class="reviews-track">
                 <div class="review-card">
@@ -1469,7 +1471,7 @@
                 </div>
                 <div class="review-card">
                     <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Wow, this book had me reeled in since the very beginning! A phenomenal series… This story has it all… Such a GOOD read."</p>
+                    <p class="review-text">"Wow, this book had me reeled in since the very beginning! A phenomenal series… Such a GOOD read."</p>
                     <span class="review-author">— Goodreads Reviewer</span>
                 </div>
                 <div class="review-card">
@@ -1479,10 +1481,10 @@
                 </div>
                 <div class="review-card">
                     <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Fabu-licious read! What a thrilling rollercoaster of a fast page-turner. Hot darn, couldn't put this book down for the life of me."</p>
+                    <p class="review-text">"Fabu-licious read! What a thrilling rollercoaster. Hot darn, couldn't put this book down for the life of me."</p>
                     <span class="review-author">— Goodreads Reviewer</span>
                 </div>
-                <!-- Duplicates for seamless loop -->
+                <!-- Duplicates -->
                 <div class="review-card">
                     <div class="review-stars">⭐⭐⭐⭐⭐</div>
                     <p class="review-text">"An absolutely page-turning, heart-racing read!! Had me hooked… I absolutely devoured this… Addictive, gripping and heart-racing."</p>
@@ -1500,7 +1502,7 @@
                 </div>
                 <div class="review-card">
                     <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Wow, this book had me reeled in since the very beginning! A phenomenal series… This story has it all… Such a GOOD read."</p>
+                    <p class="review-text">"Wow, this book had me reeled in since the very beginning! A phenomenal series… Such a GOOD read."</p>
                     <span class="review-author">— Goodreads Reviewer</span>
                 </div>
                 <div class="review-card">
@@ -1510,13 +1512,12 @@
                 </div>
                 <div class="review-card">
                     <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Fabu-licious read! What a thrilling rollercoaster of a fast page-turner. Hot darn, couldn't put this book down for the life of me."</p>
+                    <p class="review-text">"Fabu-licious read! What a thrilling rollercoaster. Hot darn, couldn't put this book down for the life of me."</p>
                     <span class="review-author">— Goodreads Reviewer</span>
                 </div>
             </div>
         </div>
 
-        <!-- Row 2 (Reverse) -->
         <div class="reviews-marquee">
             <div class="reviews-track reviews-track-reverse">
                 <div class="review-card">
@@ -1623,7 +1624,7 @@
             <p class="section-subtitle fade-up">Four heart-stopping books. One unstoppable FBI agent. Start with Gone by Dawn.</p>
 
             <div class="series-timeline">
-                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" style="text-decoration:none; color: inherit;">
+                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
                     <div class="series-book current fade-up">
                         <div class="series-book-number">01</div>
                         <h4>Gone by Dawn</h4>
@@ -1687,15 +1688,12 @@
 
             <div class="final-cta-book">
                 <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener">
-                    <img 
-                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" 
-                        alt="Gone by Dawn Book Cover"
-                    >
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" alt="Gone by Dawn Book Cover">
                 </a>
             </div>
 
             <div class="cta-row">
-                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary cta-amazon" style="font-size: 1.2rem; padding: 20px 55px;">
+                <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary" style="font-size: 1.2rem; padding: 20px 55px;">
                     📖 Get Gone by Dawn on Amazon
                 </a>
                 <p class="cta-note">Available instantly on Kindle • Paperback • Audiobook</p>
@@ -1729,22 +1727,18 @@
 
     <!-- STICKY CTA -->
     <div class="sticky-cta" id="stickyCta">
-        <img 
-            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" 
-            alt="Gone by Dawn" 
-            class="sticky-cta-cover"
-        >
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXPCgGSUZEDo0UxSVkuBSmg_SdLZtjTRuu0vX3jFPfLXTIKyPuKVr1MUZo68xPfEr2G4BKUwfU8frg9o5nsH8CxvD6xoKG2DZcQWuBXDIJOlLLyczAjm4hJT618HIYrOLAhpI-0lI56-RXAtUQGMTEFnbcZHaV-keDKZ5fYDZBEjHS5sAwMqKY5byI7M0/s320/81DmNkq6vQL._SL1500_.jpg" alt="Gone by Dawn" class="sticky-cta-cover">
         <span class="sticky-cta-text">📖 <strong>Gone by Dawn</strong> — 3,040+ ⭐⭐⭐⭐⭐ Reviews</span>
-        <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary cta-amazon">Get It on Amazon →</a>
+        <a href="https://amzn.to/4tMvOup" target="_blank" rel="noopener" class="cta-primary">Get It on Amazon →</a>
     </div>
 
     <script>
         // Particles
         const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 15; i++) {
+        for (let i = 0; i < 12; i++) {
             const particle = document.createElement('div');
             particle.classList.add('particle');
-            const size = Math.random() * 150 + 50;
+            const size = Math.random() * 120 + 50;
             particle.style.width = size + 'px';
             particle.style.height = size + 'px';
             particle.style.left = Math.random() * 100 + '%';
@@ -1753,7 +1747,7 @@
             particlesContainer.appendChild(particle);
         }
 
-        // Intersection Observer for fade-up
+        // Fade-up observer
         const fadeElements = document.querySelectorAll('.fade-up');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
@@ -1765,20 +1759,14 @@
                 }
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
         fadeElements.forEach(el => observer.observe(el));
 
         // Sticky CTA
         const stickyCta = document.getElementById('stickyCta');
         const heroSection = document.querySelector('.hero');
-
         window.addEventListener('scroll', () => {
             const heroBottom = heroSection.getBoundingClientRect().bottom;
-            if (heroBottom < 0) {
-                stickyCta.classList.add('visible');
-            } else {
-                stickyCta.classList.remove('visible');
-            }
+            stickyCta.classList.toggle('visible', heroBottom < 0);
         });
 
         // Smooth scroll
@@ -1788,9 +1776,7 @@
                 if (href !== '#') {
                     e.preventDefault();
                     const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
@@ -1817,41 +1803,20 @@
                             const eased = 1 - Math.pow(1 - progress, 3);
                             let currentNum = eased * finalNum;
 
-                            if (hasDecimal) {
-                                el.textContent = currentNum.toFixed(1) + suffix;
-                            } else if (hasComma) {
-                                el.textContent = Math.floor(currentNum).toLocaleString() + suffix;
-                            } else {
-                                el.textContent = Math.floor(currentNum) + suffix;
-                            }
+                            if (hasDecimal) el.textContent = currentNum.toFixed(1) + suffix;
+                            else if (hasComma) el.textContent = Math.floor(currentNum).toLocaleString() + suffix;
+                            else el.textContent = Math.floor(currentNum) + suffix;
 
-                            if (progress < 1) {
-                                requestAnimationFrame(animate);
-                            } else {
-                                el.textContent = finalText;
-                            }
+                            if (progress < 1) requestAnimationFrame(animate);
+                            else el.textContent = finalText;
                         }
-
                         requestAnimationFrame(animate);
                     }
                     statsObserver.unobserve(el);
                 }
             });
         }, { threshold: 0.5 });
-
         statNumbers.forEach(el => statsObserver.observe(el));
-
-        // Track Amazon clicks (optional analytics)
-        document.querySelectorAll('a[href*="amzn.to"]').forEach(link => {
-            link.addEventListener('click', () => {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'click', {
-                        event_category: 'Amazon',
-                        event_label: 'Gone by Dawn',
-                    });
-                }
-            });
-        });
     </script>
 </body>
 </html>
